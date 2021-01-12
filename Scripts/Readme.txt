@@ -1,1 +1,2 @@
-This directory contains code to visualize RNAcompete data
+This directory contains all scripts that were used to generate the data:
+# scriptname: brief description
