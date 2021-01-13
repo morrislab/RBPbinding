@@ -1001,8 +1001,8 @@ if __name__ == '__main__':
         mst = 0.025
         pw = 1.5*strechingfactor
         phw = 3.*strechingfactor#*6
-        domwidth = 3.5 #*5
-        matsw = 34.*mst
+        domwidth = 3.5 *strechingfactor #*5
+        matsw = 44.*mst
         matsh = 28.*mst
         maxleft = 0.025
         maxright = maxleft+(pw+phw)*mst+matsw
@@ -1045,7 +1045,7 @@ if __name__ == '__main__':
         ax = fig.add_subplot(122)
         ax.set_position([maxleft+(pw+phw)*mst,bottom,matsw,top-bottom])
         
-        with plt.rc_context({'lines.linewidth': 3.}):
+        with plt.rc_context({'lines.linewidth': 2.}):
             dn = dendrogram(Z, orientation = 'left', color_threshold=0, above_threshold_color='k', ax = ax0)
         sorting = dn['leaves']
         ax0.tick_params(left = False, labelleft = False, right = False, labelright = False)
