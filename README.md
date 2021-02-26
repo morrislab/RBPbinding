@@ -20,7 +20,7 @@ Before reconstructing the figures in the paper, please execute the data processi
 8. cisbp-recstats.sh
 9. arabidopsis.sh
 10. fig4.sh
-11.S cisbp_reconstruction.sh
+11. cisbp_reconstruction.sh
 
 To reconstruct the individual figures in the paper run figX.sh.
 
