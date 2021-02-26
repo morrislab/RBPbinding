@@ -5,8 +5,11 @@ We used derived a linear embedding model to understand the relationship between 
 
 Dependencies:
 python 2.7
-scikit-learn, numpy, scipy, matplotlib, statsmodels, seaborn, biopython, etc. 
-hmmer (http://hmmer.org/)
+scikit-learn, numpy, scipy, matplotlib, statsmodels, seaborn, biopython, etc.
+
+Hmmer (http://hmmer.org/)
+Capra JA and Singh M. Predicting functionally important residues from sequence conservation. Bioinformatics, 23(15):1875-82, 2007.
+(https://compbio.cs.princeton.edu/conservation/)
 
 Before reconstructing the figures in the paper, please execute the data processing scripts in the following order:
 
