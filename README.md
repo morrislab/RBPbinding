@@ -10,16 +10,16 @@ hmmer (http://hmmer.org/)
 
 Before reconstructing the figures in the paper, please execute the data processing scripts in the following order:
 
-1.A rncmpt_data.sh
-1.B fig1.sh
-2.A performance_calc.sh
-2.B interface_importance.sh
-2.C fig2.sh
-3.A jple_reconstruction.sh
-3.B fig3.sh
-4.A cisbp-recstats.sh
-4.B arabidopsis.sh
-4.C fig4.sh
+1. rncmpt_data.sh
+2. fig1.sh
+3. performance_calc.sh
+4. interface_importance.sh
+5. fig2.sh
+6. jple_reconstruction.sh
+7. fig3.sh
+8. cisbp-recstats.sh
+9. arabidopsis.sh
+10. fig4.sh
 S.1 cisbp_reconstruction.sh
 
 To reconstruct the individual figures in the paper run figX.sh.
