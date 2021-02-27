@@ -1,0 +1,3 @@
+JPLE determines which amino acid k-mers are important for specificity. K-mers can be aligned to sequence and summed up to create the residue score. 
+
+The residue score was evaluated on RBP interfaces extracted from the pdb.
