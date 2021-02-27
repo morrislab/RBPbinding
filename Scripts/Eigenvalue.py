@@ -85,13 +85,20 @@ def readin(proteinfeatures, profiles, proteinset = 'none'):
 profiles = sys.argv[1]
 proteinfeatures = sys.argv[2]
 proteinset =  sys.argv[3]
-if len(sys.argv) > 4:
-    outname = sys.argv[4]
+pearsonlow = float(sys.argv[4])
+if len(sys.argv) > 5:
+    outname = sys.argv[5]
+else:
+    outname = ''
 
 Y, datnames, Zfeatures, P, pnames, sequencefeatures = readin(proteinfeatures, profiles, proteinset = proteinset)
 XY = np.append(P,Y, axis = 1)
 np.shape(XY)
 
+if '--normP2' in sys.argv:
+    P = P/np.sqrt(np.sum(P*P, axis = 1))[:, None]
+if '--normY2' in sys.argv:
+    Y = Y/np.sqrt(np.sum(Y*Y, axis = 1))[:, None]
 
 # SVD for concatenated specificity and sequence k-mers
 u,s,v = np.linalg.svd(XY, full_matrices=False)
@@ -165,15 +172,15 @@ axr.scatter(np.arange(len(sx2)-1), median, label = 'Pearson median', c = 'k', s 
 axr.fill_between(np.arange(len(sx2)-1), low, high, color = 'grey', alpha = 0.3, linewidth = 0)
 axr.scatter(np.arange(len(sx2)-1), low, label = 'Pearson min', marker = '_', c = 'k')
 axr.scatter(np.arange(len(sx2)-1), high, label = 'Pearson max', marker = '_', c = 'grey')
-axr.legend()
+axr.legend(prop={'size':8})
 axr.set_xticks([0,25,50, 75, 100,125, 150, 175, 200, 225, 250, 275, 300, 325, 350])
 axr.set_xticklabels([0,25,50, 75, 100,125, 150, 175, 200, 225, 250, 275, 300, 325, 350], rotation = 60)
 axr.set_xlabel('Number maintained eigenvectors')
 axr.set_ylabel('Variance explained/\nDistribution over Pearson reconstructed R')
-low09 = np.where(low>=0.9)[0][0]
+low09 = np.where(low>=pearsonlow)[0][0]
 axr.plot([low09, low09],[0, np.cumsum(sy2)[low09]], c = 'r', ls = '--')
 axr.plot([0, low09], [np.cumsum(sy2)[low09], np.cumsum(sy2)[low09]], c = 'r', ls = '--')
-axr.text(low09+5, 0.85, 'Eigenvalue '+str(low09)+'\nat min Pearson=0.9\nSum(Var(R))='+str(np.around(np.cumsum(sy2)[low09], 2)), va = 'top', ha = 'left' )
+axr.text(low09+5, 0.85, 'Eigenvalue '+str(low09)+'\nat min Pearson='+str(pearsonlow)+'\nSum(Var(R))='+str(np.around(np.cumsum(sy2)[low09], 2)), va = 'top', ha = 'left' )
 
 
 # Variance explained from eigenvectors from 3 types of SVD at defined variance/reconstruction cut-off
@@ -192,15 +199,15 @@ ax.plot(np.arange(len(sp2)), np.cumsum(sp2[rearrange]), label = 'Sum(Variance(R,
 ax.set_xticks([0,25,50, 75, 100,125, 150, 175, 200, 225, 250, 275, 300, 325, 350])
 ax.set_xticklabels([0,25,50, 75, 100,125, 150, 175, 200, 225, 250, 275, 300, 325, 350], rotation = 60)
 
-ax.legend()
+ax.legend(prop={'size':8})
 ax.set_xlabel('Number maintained eigenvectors')
 ax.set_ylabel('Variance explained\n(R of reconstructed specificities)')
 
-low09 = np.where(low>=0.9)[0][0]
+low09 = np.where(low>=pearsonlow)[0][0]
 ax.plot([low09, low09],[0, np.cumsum(sy2)[low09]], c = 'r', ls = '--')
 ax.plot([0, low09], [np.cumsum(sy2)[low09], np.cumsum(sy2)[low09]], c = 'r', ls = '--')
 ax.plot([0, low09], [np.cumsum(sp2)[low09], np.cumsum(sp2)[low09]], c = 'r', ls = '--')
-ax.set_title('Eigenvalue '+str(low09)+' at min Pearson=0.9\nCumsum(E(R))='+str(np.around(np.cumsum(sy2)[low09], 2))+'\nCumsum(E(P))='+str(np.around(np.cumsum(sp2)[low09], 2)))
+ax.set_title('Eigenvalue '+str(low09)+' at min Pearson='+str(pearsonlow)+'\nCumsum(E(R))='+str(np.around(np.cumsum(sy2)[low09], 2))+'\nCumsum(E(P))='+str(np.around(np.cumsum(sp2)[low09], 2)))
 
 
 
