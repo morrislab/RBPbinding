@@ -1,0 +1,1 @@
+Leave-one-out results for JPLE model trained on augmented protein k-mer features and assessed on regular features. Augmented features included gapped 5-mers from protein sequences with at least 50% sequence identity.
