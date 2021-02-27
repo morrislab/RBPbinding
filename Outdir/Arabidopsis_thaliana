@@ -1,9 +1,0 @@
-Reconstructed RNA sequence specificities were used to determine potential regulators mRNA stability across plant tissues. Expression of 69 tissues was downloaded from (https://www.arabidopsis.org/).
-
-Specifically, mRNA expression data was retrieved from Klepikova, Anna V., et al. "A high resolution map of the Arabidopsis thaliana developmental transcriptome based on RNA‐seq profiling." The Plant Journal 88.6 (2016): 1058-1070.
-
-Sequencing reads were aligned to whole gene reference sequences with ...
-
-Intron and exon counts were separated and rpkm was calculated for each region. 
-
-Decay rates were determined from exon and intron counts based on protocol shown in https://www.nature.com/articles/s41467-017-00867-z 
