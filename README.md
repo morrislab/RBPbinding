@@ -4,10 +4,13 @@ This folder contains the supplementary code for "Reconstructing the sequence pre
 We used derived a linear embedding model to understand the relationship between protein sequence patterns and RNA sequence specificity. 
 
 Dependencies:
+
 python 2.7
+
 scikit-learn, numpy, scipy, matplotlib, statsmodels, seaborn, biopython, etc.
 
 Hmmer (http://hmmer.org/)
+
 Capra JA and Singh M. Predicting functionally important residues from sequence conservation. Bioinformatics, 23(15):1875-82, 2007.
 (https://compbio.cs.princeton.edu/conservation/)
 
