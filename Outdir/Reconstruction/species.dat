@@ -1,0 +1,683 @@
+Ostreococcus_RCC809	3	0	3	137	2.2	Single-celled alga	Alga
+Guillardia_theta	2	0	2	277	0.7	Cryptomonad	Alga
+Bigelowiella_natans	2	0	2	375	0.5	Chlorarachniophyte	Alga
+Pythium_irregulare	5	0	5	160	3.1	Water mold - plant pathogen	Alga
+Coccomyxa_subellipsoidea_C169	5	0	5	146	3.4	Green microalga	Alga
+Phytophthora_kernoviae	3	0	3	118	2.5	Infects European beech and Rhododendron ponticum	Alga
+Pythium_arrhenomanes	5	0	5	141	3.5	Water mold - plant pathogen	Alga
+Phytophthora_infestans	3	0	3	190	1.6	Potato blight water mold	Alga
+Chlorella_NC64A	4	0	4	173	2.3	Microalgae	Alga
+Fragilariopsis_cylindrus	1	0	1	163	0.6	Planktonic diatom, grows on ice	Alga
+Hemiselmis_andersenii	0	0	0	7	0.0	Nucleomorph (remnant of an algal sybiont)	Alga
+Pythium_iwayamai	4	0	4	150	2.7	Water mold - causes snow-rot disease of cereal plants	Alga
+Chroomonas_mesostigmatica	0	0	0	6	0.0	Cryptophyte alga	Alga
+Pythium_ultimum	5	0	5	210	2.4	Water mold - causes root rot diseases 	Alga
+Phaeodactylum_tricornutum	2	0	2	152	1.3	Diatom	Alga
+Pythium_vexans	4	0	4	170	2.4	Water mold - infects citruses	Alga
+Pythium_aphanidermatum	3	0	3	153	2.0	Water mold - plant pathogen	Alga
+Hyaloperonospora_arabidopsidis	3	0	3	157	1.9	Causes downy mildew of Arabidopsis thaliana	Alga
+Aureococcus_anophagefferens	4	0	4	142	2.8	Brown tide blooms	Alga
+Micromonas_pusilla	4	0	4	188	2.1	Flagellar marine algae	Alga
+Chlorella_vulgaris	6	0	6	143	4.2	Green algae	Alga
+Phytophthora_lateralis	2	0	2	139	1.4	Causes cedar root disease	Alga
+Emiliania_huxleyi	5	0	5	507	1.0	EHUX	Alga
+Thalassiosira_pseudonana	2	1	1	148	1.4	Marine diatom	Alga
+Phytophthora_parasitica	4	0	4	230	1.7	Black shank - infects tobacco, onion, and strawberries	Alga
+Micromonas_sp_RCC299	4	0	4	186	2.2	Photosynthetic picophytoplankton	Alga
+Phytophthora_ramorum	3	1	2	274	1.1	Sudden Oak Death	Alga
+Ostreococcus_tauri	7	4	3	126	5.6	Green algae	Alga
+Phytophthora_sojae	4	0	4	355	1.1	Soybean stem and root rot	Alga
+Volvox_carteri	3	0	3	186	1.6	Volvox	Alga
+Albugo_laibachii	3	0	3	206	1.5	Water mold - pathogen of Arabidopsis thaliana	Alga
+Metarhizium_anisopliae	7	0	7	113	6.2	Fungus - parasitic to many insects	Fungi
+Gloeophyllum_trabeum	5	0	5	150	3.3	Brown rot fungus	Fungi
+Rhizoctonia_solani	4	0	4	144	2.8	Plant pathogen - cause of collar rot, root rot, damping off and wire s	Fungi
+Rhizopus_oryzae	4	1	3	277	1.4	Rhizopus oryzae	Fungi
+Grosmannia_clavigera	5	0	5	104	4.8	Blue stain fungus	Fungi
+Fonsecaea_pedrosoi	5	0	5	119	4.2	Major causative agent of chromoblastomycosis	Fungi
+Rhizophagus_irregularis	3	0	3	248	1.2	Fungi that play vital functions in the phosphorus cycle	Fungi
+Gymnopus_luxurians	1	0	1	114	0.9	Mushroom that grows in wood chips	Fungi
+Rhinocladiella_mackenziei	4	0	4	117	3.4	Potential agent of cerebral phaeohyphomycosis	Fungi
+Puccinia_triticina	2	0	2	295	0.7	Wheat leaf rust	Fungi
+Puccinia_graminis	4	2	2	219	1.8	Stem rust	Fungi
+Pseudozyma_hubeiensis	2	0	2	109	1.8	Yeast	Fungi
+Jaapia_argillacea	5	0	5	158	3.2	Jaapia argillacea	Fungi
+Kazachstania_africana	7	0	7	85	8.2	Ascomycete yeast 	Fungi
+Kluyveromyces_lactis	6	0	6	81	7.4	Yeast	Fungi
+Kluyveromyces_thermotolerans	6	0	6	90	6.7	K. thermotolerans	Fungi
+Kluyveromyces_waltii	5	0	5	92	5.4	K. waltii (yeast)	Fungi
+Punctularia_strigosozonata	0	0	0	11	0.0	Fungus	Fungi
+Pyrenophora_teres	4	0	4	133	3.0	Fungal pathogen of barley	Fungi
+Hebeloma_cylindrosporum	6	0	6	144	4.2	Mushroom	Fungi
+Kazachstania_naganishii	6	0	6	81	7.4	Ascomycete yeast	Fungi
+Heterobasidion_annosum	4	0	4	157	2.5	Annosum root rot	Fungi
+Heterobasidion_irregulare	6	0	6	233	2.6	Tree root rotting pathogenic fungus 	Fungi
+Histoplasma_capsulatum	5	0	5	112	4.5	Histoplasma capsulatum	Fungi
+Melampsora_laricipopulina	3	0	3	146	2.1	Cause of poplar rust	Fungi
+Pyrenophora_triticirepentis	5	0	5	127	3.9	Fungus	Fungi
+Hydnomerulius_pinastri	1	0	1	70	1.4	Fungus	Fungi
+Komagataella_pastoris	2	0	2	85	2.4	Methylotrophic yeast 	Fungi
+Glarea_lozoyensis	3	0	3	78	3.8	Fungus - overproducer of pneumocandin	Fungi
+Schizosaccharomyces_pombe	8	7	1	110	7.3	Fission yeast	Fungi
+Enterocytozoon_bieneusi	0	0	0	58	0.0	Microsporidia	Fungi
+Saccharomycetaceae_sp_ashbya_aceri	6	0	6	81	7.4	Yeast	Fungi
+Eremothecium_cymbalariae	6	0	6	81	7.4	Close relative of Ashbya gossypii	Fungi
+Saccharomyces_paradoxus	6	0	6	86	7.0	S. paradoxus (yeast)	Fungi
+Erysiphe_necator	4	0	4	127	3.1	Causes powdery mildew of grape	Fungi
+Saccharomyces_mikatae	6	0	6	93	6.5	S. mikatae (yeast)	Fungi
+Saccharomyces_kudriavzevii	2	0	2	56	3.6	Yeast found in wine and beer	Fungi
+Eutypa_lata	8	0	8	101	7.9	Causes dead arm of grapevine	Fungi
+Exophiala_aquamarina	5	0	5	110	4.5	Anamorphic fungus hosted by fish	Fungi
+Scedosporium_apiospermum	5	0	5	93	5.4	Fungus found in stagnant water that infects immunocompromised humans	Fungi
+Scheffersomyces_stipitis	0	0	0	83	0.0	Yeast researched for its potential in renewable fuels	Fungi
+Schizosaccharomyces_octosporus	7	0	7	107	6.5	Fission yeast	Fungi
+Schizosaccharomyces_japonicus	3	0	3	122	2.5	Fission yeast	Fungi
+Schizosaccharomyces_cryophilus	6	0	6	111	5.4	Fission yeast	Fungi
+Schizophyllum_commune	7	4	3	140	5.0	Split Gill 	Fungi
+Edhazardia_aedis	0	0	0	44	0.0	Polymorphic microsporidium of mosquitoes	Fungi
+Encephalitozoon_cuniculi	0	0	0	41	0.0	Encephalitozoon cuniculi	Fungi
+Encephalitozoon_hellem	0	0	0	38	0.0	Microsporidian	Fungi
+Encephalitozoon_intestinalis	0	0	0	41	0.0	Protist (human parasite); smallest known genome	Fungi
+Endocarpon_pusillum	5	0	5	113	4.4	Lichen-forming fungus	Fungi
+Exophiala_dermatitidis	5	0	5	109	4.6	Thermophilic black yeast	Fungi
+Exophiala_mesophila	5	0	5	108	4.6	Alkylbenzene-degrading black yeast	Fungi
+Exophiala_oligosperma	5	0	5	110	4.5	Black yeast pathogenic to humans	Fungi
+Fusarium_oxysporum	7	0	7	113	6.2	Soil microbe digesting lignin	Fungi
+Fusarium_pseudograminearum	7	0	7	118	5.9	Causes crown rot of wheat	Fungi
+Fusarium_solani	8	0	8	107	7.5	Filamentous fungus	Fungi
+Fusarium_verticillioides	6	0	6	109	5.5	Gibberella fujikuroi, cause of bakanae disease in rice	Fungi
+Rozella_allomycis	2	0	2	106	1.9	One of the earliest diverging lineages of fungi	Fungi
+Gaeumannomyces_graminis	4	0	4	113	3.5	Causes black spots on rice	Fungi
+Encephalitozoon_romaleae	0	0	0	41	0.0	Microsporidian	Fungi
+Galerina_marginata	6	0	6	163	3.7	Poisonous "little brown mushroom"	Fungi
+Rhodotorula_glutinis	1	0	1	42	2.4	Pigmented yeast - infects human bloodstream	Fungi
+Fusarium_graminearum	7	0	7	123	5.7	Gibberella zeae, cause of wheat headblight	Fungi
+Fusarium_fujikuroi	7	0	7	120	5.8	Causes bakanae in rice	Fungi
+Exophiala_sideris	5	0	5	109	4.6	Black yeast isolated from environments polluted with toxic alkyl benze	Fungi
+Exophiala_spinifera	5	0	5	114	4.4	Black yeast	Fungi
+Exophiala_xenobiotica	5	0	5	113	4.4	Black yeast	Fungi
+Saccharomyces_cerevisiae	9	8	1	92	9.8	Bakers yeast	Fungi
+Saccharomyces_castellii	9	0	9	78	11.5	S. castellii	Fungi
+Fibroporia_radiculosa	6	0	6	121	5.0	Copper-tolerant fungus that causes brown rot decay of wood	Fungi
+Saccharomyces_bayanus	6	0	6	88	6.8	S. bayanus (yeast)	Fungi
+Fomitopsis_pinicola	5	0	5	137	3.6	Red-belt conk mushroom	Fungi
+Saccharomyces_arboricola	6	0	6	62	9.7	Yeast that grows in tree bark	Fungi
+Rhodosporidium_toruloides	2	0	2	120	1.7	Yeast - linked to bovine mastitis	Fungi
+Microsporum_gypseum	4	0	4	112	3.6	Mold, may cause ringworm	Fungi
+Mycosphaerella_fijiensis	4	0	4	99	4.0	Black sigatoka	Fungi
+Mycosphaerella_graminicola	4	0	4	101	4.0	Wheat pathogen	Fungi
+Pestalotiopsis_fici	6	0	6	119	5.0	Pathogen of Ficus carica	Fungi
+Naumovozyma_castellii	10	0	10	94	10.6	Yeast	Fungi
+Naumovozyma_dairenensis	9	0	9	102	8.8	Yeast	Fungi
+Penicillium_solitum	3	0	3	109	2.8	Mesophilic fungus present in marine sediments from Antarctica	Fungi
+Nectria_haematococca	8	0	8	107	7.5	Fusarium solani 	Fungi
+Nematocida_parisii_ertm1	0	0	0	34	0.0	Pathogen of nematodes	Fungi
+Nematocida_sp	0	0	0	33	0.0	Nematocida	Fungi
+Myceliophthora_thermophila	8	0	8	106	7.5	Thielavia heterothallica	Fungi
+Phaeosphaeria_nodorum	3	0	3	105	2.9	Glume blotch fungus	Fungi
+Millerozyma_farinosa	2	0	2	176	1.1	Ascomycete yeast	Fungi
+Penicillium_oxalicum	5	0	5	110	4.5	Penicillium oxalicum	Fungi
+Mixia_osmundae	1	0	1	116	0.9	Fungus	Fungi
+Moniliophthora_perniciosa	0	0	0	87	0.0	Plant pathogen	Fungi
+Moniliophthora_roreri	6	0	6	299	2.0	Fungus - causes frosty pod rot disease of cacao	Fungi
+Phycomyces_blakesleeanus	4	0	4	204	2.0	Algal fungi	Fungi
+Phlebiopsis_gigantea	7	0	7	140	5.0	Fungus that causes white rot of conifer logs and stumps	Fungi
+Phanerochaete_chrysosporium	5	0	5	163	3.1	"White rot", crust fungus	Fungi
+Phanerochaete_carnosa	6	0	6	131	4.6	Plant pathogen infecting plane trees	Fungi
+Penicillium_rubens	3	0	3	114	2.6	Source of Penicillin	Fungi
+Neofusicoccum_parvum	5	0	5	108	4.6	Sac fungus	Fungi
+Penicillium_chrysogenum	3	0	3	114	2.6	Mold	Fungi
+Ogataea_parapolymorpha	1	0	1	93	1.1	Yeast that can grow on methanol	Fungi
+Oidiodendron_maius	5	0	5	112	4.5	Fungus that associates with shrub roots	Fungi
+Paxillus_rubicundulus	6	0	6	148	4.1	Brown mushroom	Fungi
+Paxillus_involutus	2	0	2	89	2.2	Brown roll-rim mushroom	Fungi
+Ophiocordyceps_sinensis	5	0	5	95	5.3	Fungus that parasitizes larvae of ghost moths	Fungi
+Ophiostoma_piceae_uamh	4	0	4	104	3.8	Wood-staining fungus	Fungi
+Ordospora_colligata	0	0	0	42	0.0	Microsporidian - gut parasite of the microcrustacean Daphnia sp.	Fungi
+Paracoccidioides_sp_lutzii	4	0	4	135	3.0	Dimorphic ascomycete fungus 	Fungi
+Penicillium_digitatum	4	0	4	110	3.6	Common postharvest fungus disease of citrus called green mold	Fungi
+Penicillium_expansum	3	0	3	101	3.0	Post harvest rot that infects apples	Fungi
+Neosartorya_fischeri	5	0	5	109	4.6	Fungal pathogen (related to Aspergillus)	Fungi
+Neurospora_crassa	10	6	4	116	8.6	Red bread mold	Fungi
+Neurospora_discreta	9	0	9	110	8.2	Mold	Fungi
+Neurospora_tetrasperma	9	0	9	113	8.0	Mold	Fungi
+Penicillium_marneffei	4	0	4	125	3.2	Mold- cause of penicilliosis 	Fungi
+Penicillium_italicum	3	0	3	109	2.8	Post harvest disease commonly associated with citrus fruits	Fungi
+Nosema_apis	0	0	0	32	0.0	Microsporidian that affects honeybees	Fungi
+Nosema_bombycis	0	0	0	50	0.0	Microsporidian that affects silkworms	Fungi
+Nosema_ceranae	0	0	0	29	0.0	Microsporidian that affects bees	Fungi
+Paracoccidioides_brasiliensis	4	0	4	117	3.4	Cause of paracoccidioidomycosis	Fungi
+Microsporum_canis	4	0	4	105	3.8	Cause of Tinea capitis (scalp ringworm)	Fungi
+Kuraishia_capsulata	1	0	1	97	1.0	Budding yeast	Fungi
+Pseudocercospora_fijiensis	4	0	4	119	3.4	Cause of leaf-spot disease of banana plants	Fungi
+Leptosphaeria_maculans	3	0	3	110	2.7	Fungal pathogen - cause of blackleg disease on Brassica	Fungi
+Mucor_circinelloides	3	0	3	187	1.6	Cause of zygomycosis	Fungi
+Lodderomyces_elongisporus	1	0	1	92	1.1	Yeast	Fungi
+Postia_placenta	3	0	3	91	3.3	Brown rot fungus	Fungi
+Podospora_anserina	7	0	7	117	6.0	Filamentous fungus	Fungi
+Pneumocystis_murina	3	0	3	98	3.1	Fungus, first isolated from lab mice	Fungi
+Pneumocystis_carinii	2	0	2	204	1.0	Form of pneumonia	Fungi
+Macrophomina_phaseolina	3	0	3	119	2.5	Fungal pathogen - cause of charcoal rot on many plants	Fungi
+Pseudogymnoascus_destructans	6	0	6	157	3.8	Cause of white-nose syndrome in bats	Fungi
+Pseudogymnoascus_pannorum	6	0	6	109	5.5	Soil-dwelling fungu implicated in the human disease geomycosis	Fungi
+Laccaria_amethystina	6	0	6	167	3.6	Amethyst deceiver (mushroom)	Fungi
+Laccaria_bicolor	5	0	5	144	3.5	Deceiver (small tan colored mushroom)	Fungi
+Lachancea_kluyveri	7	0	7	87	8.0	L. kluyveri (budding yeast)	Fungi
+Lachancea_lanzarotensis	5	0	5	88	5.7	Grape yeast	Fungi
+Lachancea_thermotolerans	6	0	6	90	6.7	Grape yeast	Fungi
+Pseudozyma_flocculosa	0	0	0	73	0.0	Powdery mildew antagonist 	Fungi
+Pseudozyma_brasiliensis	3	0	3	107	2.8	Yeast	Fungi
+Pseudozyma_aphidis	1	0	1	88	1.1	Environmental Basidiomycete yeast - occasionally infects humans	Fungi
+Pseudozyma_antarctica	1	0	1	87	1.1	Potentially useful for production of functional glycolipids	Fungi
+Plicaturopsis_crispa	1	0	1	21	4.8	Fungus	Fungi
+Magnaporthe_oryzae	8	0	8	136	5.9	Magnaporthe grisea, rice blast fungus, many others	Fungi
+Pichia_kudriavzevii	1	0	1	95	1.1	Yeast	Fungi
+Metarhizium_acridum	7	0	7	105	6.7	Fungus - pathogenic to locusts	Fungi
+Metarhizium_album	7	0	7	105	6.7	Fungus - pathogenic to leafhoppers	Fungi
+Metarhizium_brunneum	7	0	7	110	6.4	Mitosporic fungus 	Fungi
+Metarhizium_guizhouense	7	0	7	121	5.8	Fungus	Fungi
+Metarhizium_majus	7	0	7	113	6.2	Fungus - virulent against beetles	Fungi
+Metarhizium_robertsii	7	0	7	118	5.9	Fungus - infects cockroaches	Fungi
+Meyerozyma_guilliermondii	1	0	1	79	1.3	Fungus	Fungi
+Microbotryum_violaceum	2	0	2	121	1.7	Anther smut fungus	Fungi
+Pichia_pastoris	2	0	2	85	2.4	Yeast	Fungi
+Pichia_stipitis	0	0	0	84	0.0	Yeast related to cerevisiae	Fungi
+Magnaporthe_poae	4	0	4	96	4.2	Fungus - cause of summer patch (turfgrass disease)	Fungi
+Malassezia_globosa	1	0	1	88	1.1	Yeast (human symbiont)	Fungi
+Malassezia_sympodialis	1	0	1	72	1.4	Fungal pathogen - cause of atopic eczema and granulomatous dermatitis	Fungi
+Pleurotus_ostreatus	5	0	5	164	3.0	Oyster mushroom	Fungi
+Pisolithus_tinctorius	6	0	6	243	2.5	Fungus - symbiotic with trees	Fungi
+Marssonina_brunnea	5	0	5	114	4.4	Fungal pathogen - cause of Marssonina leaf spot 	Fungi
+Pisolithus_microcarpus	6	0	6	198	3.0	Fungus - symbiotic with trees	Fungi
+Piriformospora_indica	3	0	3	131	2.3	Endophytic root-colonizing fungus	Fungi
+Piloderma_croceum	6	0	6	170	3.5	Fungus	Fungi
+Microsporidia_sp	2	0	2	69	2.9	Spore-forming unicellular parasites	Fungi
+Aspergillus_ruber	5	0	5	119	4.2	Mold	Fungi
+Bipolaris_oryzae	4	0	4	111	3.6	Cause of rice brown spot disease	Fungi
+Bipolaris_sorokiniana	4	0	4	120	3.3	Cause of several cereal diseases	Fungi
+Bipolaris_victoriae	4	0	4	112	3.6	Fungal plant pathogen - cause of victoria blight	Fungi
+Bipolaris_zeicola	4	0	4	115	3.5	Bipolaris zeicola	Fungi
+Blastomyces_dermatitidis	5	0	5	117	4.3	Causes blastomycosis	Fungi
+Blumeria_graminis	5	0	5	102	4.9	Barley powdery mildew	Fungi
+Botryobasidium_botryosum	5	0	5	159	3.1	Botryobasidium botryosum	Fungi
+Botrytis_cinerea	5	0	5	120	4.2	Botrytis cinerea	Fungi
+Zymoseptoria_tritici	4	0	4	101	4.0	Cause of septoria tritici blotch in wheat	Fungi
+Bipolaris_maydis	4	0	4	109	3.7	Southern corn leaf blight	Fungi
+Beauveria_bassiana	7	0	7	112	6.2	Fungus - cause of white muscardine disease	Fungi
+Aspergillus_terreus	3	0	3	104	2.9	Aspergillus terreus	Fungi
+Trichoderma_virens	7	0	7	109	6.4	Plant beneficial fungus	Fungi
+Trichoderma_reesei	7	0	7	102	6.9	Hypocrea jecorina	Fungi
+Aureobasidium_melanogenum	4	0	4	115	3.5	Black, yeast-like fungus	Fungi
+Aureobasidium_pullulans	4	0	4	114	3.5	Black, yeast-like fungus	Fungi
+Aureobasidium_subglaciale	4	0	4	114	3.5	Black, yeast-like fungus	Fungi
+Trichoderma_atroviride	7	0	7	114	6.1	Cold tollerant, hyperparasite	Fungi
+Batrachochytrium_dendrobatidis	6	1	5	124	4.8	Chytrid targetting amphibians	Fungi
+Baudoinia_compniacensis	4	0	4	112	3.6	Whiskey fungus	Fungi
+Tremella_mesenterica	2	0	2	218	0.9	Golden jelly fungus	Fungi
+Trametes_cinnabarina	6	0	6	153	3.9	White-rot fungus	Fungi
+Candida_glabrata	9	0	9	90	10.0	Human pathogen (fungus)	Fungi
+Candida_guilliermondii	1	0	1	79	1.3	Yeast	Fungi
+Candida_lusitaniae	1	0	1	83	1.2	Yeast	Fungi
+Candida_maltosa	1	0	1	85	1.2	Yeast	Fungi
+Candida_orthopsilosis	1	0	1	86	1.2	Yeast	Fungi
+Candida_parapsilosis	1	0	1	84	1.2	Yeast	Fungi
+Candida_tenuis	1	0	1	77	1.3	Yeast	Fungi
+Candida_tropicalis	1	0	1	86	1.2	Yeast	Fungi
+Capronia_coronata	5	0	5	108	4.6	Black yeast	Fungi
+Candida_dubliniensis	1	0	1	96	1.0	Fungal pathogen	Fungi
+Tetrapisispora_blattae	7	0	7	87	8.0	Tetrapisispora blattae	Fungi
+Trachipleistophora_hominis	0	0	0	33	0.0	Obligate intracellular microsporidian parasite	Fungi
+Brettanomyces_bruxellensis	1	0	1	70	1.4	Yeast - used in Belgian beers	Fungi
+Torulaspora_delbrueckii	7	0	7	84	8.3	Ubiquitous yeast species	Fungi
+Torrubiella_hemipterigena	7	0	7	113	6.2	Fungus that lives on insects	Fungi
+Togninia_minima	6	0	6	104	5.8	Togninia minima	Fungi
+Byssochlamys_spectabilis	3	0	3	105	2.9	Common environmental mold	Fungi
+Tilletiaria_anomala	2	0	2	107	1.9	Fungus found in decayed wood	Fungi
+Thielavia_terrestris	8	0	8	116	6.9	Thermophilic fungus related to Nerospora	Fungi
+Tetrapisispora_phaffii	7	0	7	93	7.5	Tetrapisispora phaffii	Fungi
+Capronia_epimyces	5	0	5	108	4.6	Black yeast	Fungi
+Candida_albicans	2	0	2	175	1.1	Yeast	Fungi
+Vittaforma_corneae	0	0	0	28	0.0	Human-infecting microsporidian	Fungi
+Anncaliia_algerae	0	0	0	59	0.0	Aquatic microsporidium that infects mosquitoes	Fungi
+Verticillium_dahliae	6	0	6	104	5.8	Causes verticillium wilt	Fungi
+Verticillium_alfalfae	4	0	4	93	4.3	Causes verticillium wilt in some plant species	Fungi
+Verticillium_albo_atrum	4	0	4	93	4.3	Plant pathogen targeting: hops, alfalfa, cotton	Fungi
+Verruconis_gallopava	5	0	5	112	4.5	Mold causing saprophytic infection in immunosuppressed hosts	Fungi
+Vavraia_culicis	0	0	0	36	0.0	Microsporidian parasite of mosquitoes	Fungi
+Vanderwaltozyma_polyspora	7	0	7	95	7.4	Yeast: post-WGD lineage most divergent from cerevisiae	Fungi
+Ustilago_maydis	3	0	3	108	2.8	Corn smut	Fungi
+Wallemia_ichthyophaga	2	0	2	104	1.9	Most halophilic fungus known	Fungi
+Wallemia_sebi	2	0	2	104	1.9	Brown mold commonly found in indoor air dust	Fungi
+Acremonium_chrysogenum	7	0	7	107	6.5	Acremonium chrysogenum	Fungi
+Zygosaccharomyces_rouxii	8	0	8	82	9.8	Z. rouxii	Fungi
+Zygosaccharomyces_bailii	16	0	16	160	10.0	Causes spoilage resulting in huge economic losses to the food industry	Fungi
+Agaricus_bisporus	5	0	5	197	2.5	Common (button) mushroom	Fungi
+Yarrowia_lipolytica	1	0	1	103	1.0	Yeast	Fungi
+Allomyces_macrogynus	6	0	6	268	2.2	Zoosporic fungus	Fungi
+Alternaria_brassicicola	4	0	4	109	3.7	Plant pathogen (brassica dark leaf spot)	Fungi
+Amanita_muscaria	5	0	5	177	2.8	Fly agaric mushroom 	Fungi
+Wickerhamomyces_ciferrii	2	0	2	100	2.0	Yeast	Fungi
+Ustilago_hordei	2	0	2	144	1.4	Cause of covered smut of barley	Fungi
+Ustilaginoidea_virens	7	0	7	98	7.1	Plant pathogen that causes False Smut of rice	Fungi
+Trichophyton_interdigitale	5	0	5	112	4.5	Source of penicillin	Fungi
+Trichophyton_equinum	4	0	4	103	3.9	Horse ringworm	Fungi
+Ashbya_gossypii	5	0	5	89	5.6	Plant pathogen (fungus)	Fungi
+Aspergillus_carbonarius	4	0	4	105	3.8	Black spore mold	Fungi
+Aspergillus_clavatus	5	0	5	114	4.4	Aspergillus	Fungi
+Aspergillus_flavus	3	0	3	108	2.8	Aspergillus	Fungi
+Aspergillus_fumigatus	5	0	5	104	4.8	Cause of aspergillosis	Fungi
+Aspergillus_nidulans	5	2	3	111	4.5	Aspergillus	Fungi
+Aspergillus_niger	2	0	2	112	1.8	Aspergillus (black mold)	Fungi
+Arthroderma_otae	4	0	4	104	3.8	Zoophilic dermatophyte fungus	Fungi
+Arthroderma_benhamiae	4	0	4	97	4.1	Ringworm	Fungi
+Uncinocarpus_reesii	5	0	5	100	5.0	Related to Coccidioides, the cause of Coccidiomycosis	Fungi
+Tulasnella_calospora	3	0	3	141	2.1	Tulasnella calospora	Fungi
+Tuber_melanosporum	3	0	3	109	2.8	Black truffle	Fungi
+Trichosporon_asahii	2	0	2	98	2.0	Fungal pathogen found in immunologically compromised patients	Fungi
+Trichophyton_verrucosum	4	0	4	93	4.3	Cow ringworm	Fungi
+Trichophyton_tonsurans	4	0	4	101	4.0	Cause of Tinea capitis (scalp ringworm)	Fungi
+Trichophyton_soudanense	5	0	5	108	4.6	Common cause of tinea capitis	Fungi
+Trichophyton_rubrum	5	0	5	108	4.6	Athletes foot, jock itch, ringworm	Fungi
+Arthrobotrys_oligospora	5	0	5	119	4.2	Predacious fungus of nematodes	Fungi
+Aspergillus_oryzae	3	0	3	115	2.6	Koji mold (makes sake)	Fungi
+Capronia_semiimmersa	5	0	5	114	4.4	Black yeast	Fungi
+Sphaerobolus_stellatus	3	0	3	238	1.3	Cannonball fungus	Fungi
+Cordyceps_militaris	5	0	5	101	5.0	Mushroom used in traditional Asian medical practice 	Fungi
+Coprinopsis_cinerea	5	0	5	142	3.5	Inky cap mushroom	Fungi
+Coniosporium_apollinis	4	0	4	113	3.5	Rock-inhabiting fungus	Fungi
+Colletotrichum_sublineola	7	0	7	106	6.6	Causes anthracnose disease on sorghum	Fungi
+Colletotrichum_orbiculare	5	0	5	109	4.6	Plant pathogen of melons and cucumber	Fungi
+Colletotrichum_higginsianum	5	0	5	116	4.3	Cause of anthracnose disease on many plants	Fungi
+Colletotrichum_graminicola	7	0	7	110	6.4	Glomerella graminicola, causes plant cankers (anthracnose) on maize an	Fungi
+Sordaria_macrospora	8	0	8	119	6.7	Microscopic fungus - model of fruiting body development in Ascomycetes	Fungi
+Cochliobolus_heterostrophus_C5	4	0	4	119	3.4	Southern Corn Leaf Blight	Fungi
+Coccidioides_posadasii	4	0	4	115	3.5	Cause of Valley Fever	Fungi
+Coccidioides_immitis	5	0	5	111	4.5	Cause of Valley Fever	Fungi
+Clavispora_lusitaniae	1	0	1	83	1.2	Yeast	Fungi
+Claviceps_purpurea	4	0	4	115	3.5	Fungus that grows on the ears of cereal plants	Fungi
+Setosphaeria_turcica	5	0	5	122	4.1	Causal agent of Northern Leaf Blight in corn	Fungi
+Dothistroma_septosporum	4	0	4	115	3.5	Cause of red band needle blight	Fungi
+Cladophialophora_yegresii	5	0	5	108	4.6	Cladophialophora yegresii	Fungi
+Spathaspora_passalidarum	2	0	2	91	2.2	Yeast with potential in biofuel production	Fungi
+Cryphonectria_parasitica	7	0	7	107	6.5	Chestnut blight fungus	Fungi
+Debaryomyces_hansenii	1	0	1	95	1.1	Salt loving yeast	Fungi
+Sphaerulina_musiva	4	0	4	109	3.7	Cause of leaf spot and canker disease on poplar trees	Fungi
+Spizellomyces_punctatus	3	0	3	159	1.9	Fungus with weird mitochondrial genome	Fungi
+Sporisorium_reilianum	3	0	3	117	2.6	Causal agent of maize head smut	Fungi
+Dactylellina_haptotyla	5	0	5	115	4.3	Nematode-trapping fungus	Fungi
+Dacryopinax_sp	4	0	4	109	3.7	Jelly fungus - causes extensive decay in dead wood	Fungi
+Cyphellophora_europaea	4	0	4	112	3.6	Black yeast-like fungus	Fungi
+Sporobolomyces_roseus	2	0	2	96	2.1	Red yeast, related to rusts and smuts	Fungi
+Sporothrix_brasiliensis	6	0	6	101	5.9	Soil-dwelling fungus - possible causitive agent of sporotrichosis	Fungi
+Spraguea_lophii	0	0	0	35	0.0	Microsporidian that infects Monkfish	Fungi
+Stachybotrys_chartarum	6	0	6	105	5.7	Black mold that causes poor indoor air quality	Fungi
+Stachybotrys_chlorohalonata	6	0	6	106	5.7	Black mold that causes poor indoor air quality	Fungi
+Stagonospora_nodorum	4	0	4	120	3.3	Septoria nodorum, pathogen of wheat and related cereals, cause of glum	Fungi
+Dichomitus_squalens	1	0	1	68	1.5	Western red rot	Fungi
+Cryptococcus_neoformans	2	0	2	114	1.8	Cryptococcus neoformans	Fungi
+Cryptococcus_gattii	3	0	3	109	2.8	Encapsulated yeast found primarily in tropical and subtropical climate	Fungi
+Cladophialophora_psammophila	5	0	5	114	4.4	Black yeast	Fungi
+Cladophialophora_immunda	5	0	5	117	4.3	Black yeast	Fungi
+Cladophialophora_bantiana	5	0	5	112	4.5	Dematiaceous fungus - causes brain abscesses	Fungi
+Scleroderma_citrinum	6	0	6	251	2.4	Pigskin poison puffball	Fungi
+Suillus_luteus	6	0	6	153	3.9	Slippery Jack mushroom	Fungi
+Talaromyces_stipitatus	4	0	4	132	3.0	Non-pathogenic filamentous fungus	Fungi
+Ceriporiopsis_subvermispora	6	0	6	138	4.3	White-rot fungus	Fungi
+Sclerotinia_borealis	5	0	5	121	4.1	Pathogen infecting barley, rye and wheat	Fungi
+Chaetomium_globosum	8	0	8	152	5.3	Mold allergen	Fungi
+Chaetomium_thermophilum	9	0	9	108	8.3	Thermophilic filamentous fungus	Fungi
+Drechslerella_stenobrocha	3	0	3	74	4.1	Constricting-ring-forming fungus	Fungi
+Sclerotinia_sclerotiorum	3	0	3	91	3.3	Pathogenic fungus, causes fuzzy growths on plants	Fungi
+Serendipita_vermifera	4	0	4	160	2.5	Jelly fungus	Fungi
+Colletotrichum_fioriniae	7	0	7	110	6.4	Cause of bitter rot	Fungi
+Serpula_lacrymans	6	0	6	293	2.0	Fungus (cause of dry rot)	Fungi
+Cladophialophora_carrionii	5	0	5	111	4.5	Cause of chromoblastomycosis	Fungi
+Talaromyces_marneffei	4	0	4	125	3.2	Infects humans and causes fever, weight loss and malaise	Fungi
+Colletotrichum_gloeosporioides	7	0	7	109	6.4	Cause of bitter rot	Fungi
+Sarcophilus_harrisii	128	0	128	365	35.1	Tasmanian devil	Metazoa
+Pan_troglodytes	162	0	162	369	43.9	Chimpanzee	Metazoa
+Pelodiscus_sinensis	127	0	127	328	38.7	Chinese softshell turtle	Metazoa
+Saccoglossus_kowalevskii	34	0	34	448	7.6	Acorn worm	Metazoa
+Papio_anubis	173	0	173	395	43.8	Olive baboon	Metazoa
+Tyto_alba	66	0	66	236	28.0	Barn owl	Metazoa
+Petromyzon_marinus	42	0	42	186	22.6	Lamprey	Metazoa
+Oryzias_latipes	137	0	137	397	34.5	Medaka fish	Metazoa
+Ovis_aries	177	0	177	430	41.2	Sheep	Metazoa
+Tupaia_belangeri	71	0	71	284	25.0	Northern treeshrew	Metazoa
+Tursiops_truncatus	127	0	127	338	37.6	Atlantic bottle-nosed dolphin	Metazoa
+Otolemur_garnettii	190	0	190	432	44.0	Small-eared galago	Metazoa
+Parascaris_equorum	0	0	0	115	0.0	Equine roundworm	Metazoa
+Xenopus_laevis	188	2	186	375	50.1	African clawed frog	Metazoa
+Wuchereria_bancrofti	14	0	14	241	5.8	W. bancrofti (nematode)	Metazoa
+Solenopsis_invicta	23	0	23	189	12.2	Fire ant	Metazoa
+Schistosoma_mansoni	15	5	10	203	7.4	Blood fluke	Metazoa
+Soboliphyme_baturini	10	0	10	155	6.5	Parasitic nematode	Metazoa
+Schistosoma_japonicum	10	0	10	213	4.7	Blood fluke	Metazoa
+Vicugna_pacos	79	0	79	243	32.5	Alpaca	Metazoa
+Schistocephalus_solidus	7	0	7	138	5.1	Tapeworm of fish	Metazoa
+Xenopus_tropicalis	140	9	131	444	31.5	Western clawed frog	Metazoa
+Sorex_araneus	77	0	77	260	29.6	Eurasian common shrew	Metazoa
+Parastrongyloides_trichosuri	13	0	13	182	7.1	Nematode parasite of mammals	Metazoa
+Zootermopsis_nevadensis	35	0	35	217	16.1	Dampwood termite	Metazoa
+Schistosoma_rodhaini	5	0	5	207	2.4	Blood fluke - parasite of wild rodents	Metazoa
+Schistosoma_mattheei	5	0	5	185	2.7	Blood fluke - livestock parasite	Metazoa
+Pediculus_humanus	37	0	37	197	18.8	Head louse	Metazoa
+Schistosoma_margrebowiei	6	0	6	208	2.9	Basal member of Schistosoma blood flukes	Metazoa
+Xiphophorus_maculatus	154	0	154	416	37.0	Platyfish	Metazoa
+Schistosoma_haematobium	13	0	13	202	6.4	Digenetic trematode, found in Africa and the Middle East	Metazoa
+Schistosoma_curassoni	6	0	6	236	2.5	Trematode - parasite of sheep, cattle and goats	Metazoa
+Trichuris_trichiura	9	0	9	166	5.4	Round worm that causes trichuriasis	Metazoa
+Tarsius_syrichta	78	0	78	267	29.2	Philippine tarsier	Metazoa
+Strongyloides_venezuelensis	14	0	14	235	6.0	Threadworm - infects mice	Metazoa
+Thelazia_callipaeda	14	0	14	157	8.9	Parasitic nematode - the most common cause of thelaziasis	Metazoa
+Strongyloides_stercoralis	14	0	14	186	7.5	Threadworm - human pathogenic parasitic roundworm causing the disease 	Metazoa
+Rattus_norvegicus	172	0	172	406	42.4	Rat	Metazoa
+Rhabditophanes_kr3021	11	0	11	186	5.9	Nematode	Metazoa
+Strongyloides_papillosus	14	0	14	311	4.5	Intestinal threadworm	Metazoa
+Strongylocentrotus_purpuratus	22	0	22	392	5.6	Sea urchin	Metazoa
+Protopolystoma_xenopodis	3	0	3	191	1.6	Flatworm	Metazoa
+Strigamia_maritima	43	0	43	390	11.0	Centipede	Metazoa
+Strongylus_vulgaris	6	0	6	139	4.3	Blood worm - common horse parasite 	Metazoa
+Tetraodon_nigroviridis	135	4	131	388	34.8	Green puffer	Metazoa
+Pteropus_vampyrus	131	0	131	336	39.0	Large flying fox	Metazoa
+Teladorsagia_circumcincta	14	0	14	241	5.8	Parasitic nematode that infects sheep and goats	Metazoa
+Tetranychus_urticae	27	0	27	192	14.1	Two-spotted spider mite	Metazoa
+Takifugu_rubripes	146	0	146	399	36.6	Pufferfish	Metazoa
+Taeniopygia_guttata	110	0	110	315	34.9	Zebra finch	Metazoa
+Taenia_solium	10	0	10	216	4.6	Pork tapeworm	Metazoa
+Syphacia_muris	18	0	18	164	11.0	Rat pinworm	Metazoa
+Sus_scrofa	150	0	150	390	38.5	Pig	Metazoa
+Taenia_asiatica	11	0	11	172	6.4	Asian tapeworm	Metazoa
+Procavia_capensis	93	0	93	303	30.7	Cape hyrax	Metazoa
+Toxocara_canis	14	0	14	188	7.4	Dog roundworm	Metazoa
+Pristionchus_exspectatus	8	0	8	232	3.4	Non-parasitic nematode	Metazoa
+Schmidtea_mediterranea	18	0	18	456	3.9	Freshwater planarian	Metazoa
+Steinernema_glaseri	17	0	17	293	5.8	Predatory nematode	Metazoa
+Steinernema_feltiae	17	0	17	271	6.3	Predatory nematode	Metazoa
+Steinernema_carpocapsae	19	0	19	269	7.1	Nematode - usefule in gardening	Metazoa
+Spirometra_erinaceieuropaei	3	0	3	245	1.2	Tapeworm that infects domestic animals and humans	Metazoa
+Phlebotomus_papatasi	24	0	24	169	14.2	Sand fly	Metazoa
+Pristionchus_pacificus	9	0	9	261	3.4	P. pacificus (nematode)	Metazoa
+Trichoplax_adhaerens	17	0	17	173	9.8	Placozoan (simple animal)	Metazoa
+Trichuris_muris	12	0	12	244	4.9	Nematode parasite of mice	Metazoa
+Trichobilharzia_regenti	5	0	5	190	2.6	Nasal parasite of birds that causes cercarial dermatitis in humans	Metazoa
+Romanomermis_culicivorax	12	0	12	242	5.0	Nematode	Metazoa
+Steinernema_scapterisci	18	0	18	274	6.6	Mole cricket nematode	Metazoa
+Pongo_abelii	153	0	153	381	40.2	Sumatran orangutan	Metazoa
+Pogona_vitticeps	126	0	126	351	35.9	Central bearded dragon	Metazoa
+Poecilia_formosa	169	0	169	443	38.1	Amazon molly	Metazoa
+Rhodnius_prolixus	33	0	33	236	14.0	Kissing bug	Metazoa
+Tribolium_castaneum	37	0	37	305	12.1	Beetle	Metazoa
+Trichinella_nativa	12	0	12	198	6.1	Nematode worm found in arctic and subarctic regions	Metazoa
+Trichinella_spiralis	14	0	14	276	5.1	Trichina worm - cause of trichinosis	Metazoa
+Steinernema_monticolum	20	0	20	293	6.8	Nematode common in Korea	Metazoa
+Trichuris_suis	13	0	13	214	6.1	Whipworm	Metazoa
+Camponotus_floridanus	30	0	30	291	10.3	Florida carpenter ant	Metazoa
+Culex_quinquefasciatus	40	0	40	299	13.4	C. quinquefasciatus (mosquito)	Metazoa
+Cylicostephanus_goldi	2	0	2	101	2.0	Parasitic nematode that lives in the large intestine of horses	Metazoa
+Danaus_plexippus	38	0	38	237	16.0	Monarch butterfly	Metazoa
+Danio_rerio	173	10	163	478	36.2	Zebrafish	Metazoa
+Daphnia_pulex	35	0	35	474	7.4	Water flea	Metazoa
+Dasypus_novemcinctus	181	0	181	481	37.6	Nine-banded armadillo	Metazoa
+Dendroctonus_ponderosae	39	0	39	214	18.2	Mountain pine beetle	Metazoa
+Dictyocaulus_viviparus	22	0	22	172	12.8	Bovine lungworm	Metazoa
+Diphyllobothrium_latum	6	0	6	230	2.6	Broad fish tapeworm - can cause Diphyllobothriasis	Metazoa
+Dipodomys_ordii	93	0	93	295	31.5	Ords kangaroo rat	Metazoa
+Dirofilaria_immitis	14	0	14	219	6.4	Dog heartworm - parasitic roundworm 	Metazoa
+Culex_pipiens	39	0	39	387	10.1	C. pipiens (mosquito)	Metazoa
+Crassostrea_gigas	26	0	26	1024	2.5	Pacific oyster	Metazoa
+Canis_familiaris	175	0	175	411	42.6	Dog	Metazoa
+Capitella_teleta	46	0	46	402	11.4	Segmented worm	Metazoa
+Cavia_porcellus	149	0	149	378	39.4	Guinea pig	Metazoa
+Chelonia_mydas	84	0	84	299	28.1	Green sea turtle	Metazoa
+Chlorocebus_sabaeus	164	0	164	380	43.2	Green monkey	Metazoa
+Choloepus_hoffmanni	67	0	67	253	26.5	Hoffmanns two-fingered sloth	Metazoa
+Cicer_arietinum	61	0	61	490	12.4	Chickpea	Metazoa
+Cimex_lectularius	28	0	28	226	12.4	Bed bug	Metazoa
+Ciona_intestinalis	23	0	23	210	11.0	Transparent sea squirt	Metazoa
+Ciona_savignyi	21	0	21	163	12.9	Pacific transparent sea squirt	Metazoa
+Clonorchis_sinensis	16	0	16	216	7.4	Chinese liver fluke	Metazoa
+Dracunculus_medinensis	13	0	13	149	8.7	Guinea worm - nematode that causes dracunculiasis	Metazoa
+Drosophila_ananassae	59	0	59	212	27.8	D. ananassae (fruit fly)	Metazoa
+Drosophila_erecta	58	0	58	215	27.0	D. erecta (fruit fly)	Metazoa
+Echinostoma_caproni	7	0	7	152	4.6	Parasitic intestinal fluke	Metazoa
+Elaeophora_elaphi	11	0	11	169	6.5	Nematode parasite found in the blood vessels of the liver in Red Deer	Metazoa
+Enterobius_vermicularis	17	0	17	184	9.2	Pinworm - parasitic nematode	Metazoa
+Equus_caballus	133	0	133	345	38.6	Horse	Metazoa
+Erinaceus_europaeus	70	0	70	265	26.4	Western European hedgehog	Metazoa
+Fasciola_hepatica	6	0	6	199	3.0	Common liver fluke - parasitic trematode	Metazoa
+Felis_catus	152	0	152	412	36.9	Cat	Metazoa
+Ficedula_albicollis	106	0	106	309	34.3	Collared flycatcher	Metazoa
+Gadus_morhua	135	0	135	400	33.8	Atlantic cod	Metazoa
+Gallus_gallus	109	5	104	310	35.2	Chicken	Metazoa
+Gasterosteus_aculeatus	156	0	156	413	37.8	Three-spined stickleback	Metazoa
+Echinops_telfairi	87	0	87	330	26.4	Lesser hedgehog tenrec	Metazoa
+Echinococcus_multilocularis	10	0	10	218	4.6	Tapeworm	Metazoa
+Drosophila_grimshawi	54	0	54	213	25.4	D. grimshawi (fruit fly)	Metazoa
+Drosophila_melanogaster	73	61	12	237	30.8	Fruit fly	Metazoa
+Drosophila_mojavensis	58	0	58	208	27.9	D. mojavensis (fruit fly)	Metazoa
+Drosophila_persimilis	48	0	48	239	20.1	D. persimilis (fruit fly)	Metazoa
+Drosophila_pseudoobscura	54	0	54	232	23.3	Fruit fly	Metazoa
+Drosophila_sechellia	60	0	60	220	27.3	D. sechellia (fruit fly)	Metazoa
+Drosophila_simulans	47	0	47	195	24.1	D. simulans (fruit fly)	Metazoa
+Drosophila_virilis	54	0	54	214	25.2	D. virilis (fruit fly)	Metazoa
+Drosophila_willistoni	57	0	57	229	24.9	D. willistoni (fruit fly)	Metazoa
+Drosophila_yakuba	60	0	60	214	28.0	D. yakuba (fruit fly)	Metazoa
+Echinococcus_canadensis	11	0	11	204	5.4	Parasite species of cyclophyllid tapeworms	Metazoa
+Geospiza_fortis	103	0	103	298	34.6	Medium ground finch	Metazoa
+Acyrthosiphon_pisum	36	0	36	498	7.2	Pea aphid	Metazoa
+Anopheles_arabiensis	34	0	34	219	15.5	Mosquito	Metazoa
+Anopheles_atroparvus	38	0	38	204	18.6	Mosquito	Metazoa
+Anopheles_christyi	31	0	31	183	16.9	Mosquito	Metazoa
+Anopheles_coluzzii	30	0	30	191	15.7	Mosquito	Metazoa
+Anopheles_culicifacies	38	0	38	212	17.9	Mosquito	Metazoa
+Anopheles_darlingi	34	0	34	193	17.6	Mosquito	Metazoa
+Anopheles_dirus	37	0	37	212	17.5	Mosquito	Metazoa
+Anopheles_epiroticus	38	0	38	214	17.8	Mosquito	Metazoa
+Anopheles_farauti	35	0	35	209	16.7	Mosquito	Metazoa
+Anopheles_funestus	39	0	39	223	17.5	Mosquito	Metazoa
+Anopheles_gambiae	44	0	44	221	19.9	Mosquito (seven types)	Metazoa
+Anopheles_albimanus	33	0	33	203	16.3	Mosquito	Metazoa
+Anolis_carolinensis	120	0	120	418	28.7	Green anole	Metazoa
+Aedes_aegypti	43	0	43	265	16.2	Yellowfever mosquito	Metazoa
+Ailuropoda_melanoleuca	160	0	160	383	41.8	Panda	Metazoa
+Alligator_sinensis	105	0	105	338	31.1	Chinese alligator	Metazoa
+Amphimedon_queenslandica	15	0	15	616	2.4	Sponge	Metazoa
+Anas_platyrhynchos	95	0	95	294	32.3	Wild duck	Metazoa
+Ancylostoma_caninum	16	0	16	289	5.5	Hookworm nematode	Metazoa
+Ancylostoma_ceylanicum	13	0	13	193	6.7	Parasitic roundworm (hookworm)	Metazoa
+Ancylostoma_duodenale	17	0	17	261	6.5	Parasitic nematode - Old World hookworm	Metazoa
+Angiostrongylus_cantonensis	13	0	13	130	10.0	Parasitic nematode (roundworm) that causes Angiostrongyliasis	Metazoa
+Angiostrongylus_costaricensis	17	0	17	135	12.6	Parasitic nematode	Metazoa
+Anisakis_simplex	9	0	9	208	4.3	Herring worm	Metazoa
+Anopheles_maculatus	24	0	24	178	13.5	Mosquito	Metazoa
+Anopheles_melas	36	0	36	223	16.1	Mosquito	Metazoa
+Anopheles_merus	35	0	35	191	18.3	Mosquito	Metazoa
+Bos_taurus	163	0	163	385	42.3	Bovine	Metazoa
+Branchiostoma_floridae	60	0	60	1172	5.1	Florida lancelet (fish)	Metazoa
+Brugia_malayi	18	0	18	221	8.1	B. malayi (nematode)	Metazoa
+Brugia_timori	6	0	6	174	3.4	Human filarial parasitic nematode (roundworm) - causes Timor filariasi	Metazoa
+Buceros_rhinoceros	73	0	73	241	30.3	Rhinoceros hornbill	Metazoa
+Bursaphelenchus_xylophilus	11	0	11	197	5.6	Pine wood nematode	Metazoa
+Caenorhabditis_brenneri	58	0	58	316	18.4	C. brenneri (nematode)	Metazoa
+Caenorhabditis_briggsae	43	7	36	266	16.2	C. briggsae	Metazoa
+Caenorhabditis_elegans	52	32	20	232	22.4	C. elegans	Metazoa
+Caenorhabditis_japonica	37	0	37	474	7.8	C. japonica (nematode)	Metazoa
+Caenorhabditis_remanei	43	0	43	396	10.9	C. remanei (nematode)	Metazoa
+Bos_grunniens	158	0	158	395	40.0	Yak	Metazoa
+Bombyx_mori	31	0	31	211	14.7	Silk moth	Metazoa
+Anopheles_minimus	37	0	37	216	17.1	Mosquito	Metazoa
+Anopheles_quadriannulatus	36	0	36	218	16.5	Mosquito	Metazoa
+Anopheles_sinensis	29	0	29	178	16.3	Mosquito	Metazoa
+Anopheles_stephensi	40	0	40	222	18.0	Mosquito	Metazoa
+Apis_mellifera	42	0	42	218	19.3	Honey bee	Metazoa
+Aptenodytes_forsteri	104	0	104	293	35.5	Emperor penguin	Metazoa
+Ascaris_lumbricoides	15	0	15	150	10.0	Giant roundworm of humans	Metazoa
+Ascaris_suum	20	0	20	234	8.5	Large roundworm of pigs	Metazoa
+Astyanax_mexicanus	156	0	156	439	35.5	Blind cave fish	Metazoa
+Atta_cephalotes	25	0	25	231	10.8	Leafcutter ant	Metazoa
+Biomphalaria_glabrata	15	0	15	154	9.7	Air-breathing freshwater snail	Metazoa
+Callithrix_jacchus	234	0	234	499	46.9	Common marmoset	Metazoa
+Meloidogyne_floridensis	4	0	4	326	1.2	Root-knot nematode	Metazoa
+Nematostella_vectensis	26	3	23	324	8.0	Starlet sea anemone	Metazoa
+Lutzomyia_longipalpis	23	0	23	183	12.6	Sand fly	Metazoa
+Nippostrongylus_brasiliensis	15	0	15	234	6.4	Gastrointestinal roundworm	Metazoa
+Lucilia_cuprina	42	0	42	314	13.4	Metazoa	Metazoa
+Lottia_gigantea	30	0	30	313	9.6	Owl limpet (sea snail)	Metazoa
+Loa_loa	18	0	18	207	8.7	L. loa (nematode)	Metazoa
+Nomascus_leucogenys	145	0	145	360	40.3	Northern white-cheeked gibbon	Metazoa
+Ochotona_princeps	90	0	90	339	26.5	Southern American pika	Metazoa
+Octopus_bimaculoides	28	0	28	312	9.0	Octopus	Metazoa
+Litomosoides_sigmodontis	19	0	19	213	8.9	Nematode (parasite of rodents)	Metazoa
+Oesophagostomum_dentatum	18	0	18	225	8.0	Nodule worm	Metazoa
+Oikopleura_dioica	9	0	9	316	2.8	Tunicate	Metazoa
+Onchocerca_flexuosa	7	0	7	214	3.3	Parasitic roundworm	Metazoa
+Leptinotarsa_decemlineata	31	0	31	346	9.0	Colorado potato beetle	Metazoa
+Onchocerca_ochengi	16	0	16	243	6.6	Parasitic roundworm	Metazoa
+Onchocerca_volvulus	15	0	15	210	7.1	Nematode causing river blindness	Metazoa
+Ophisaurus_gracilis	88	0	88	307	28.7	Burmese glass lizard	Metazoa
+Necator_americanus	22	0	22	192	11.5	New World hookworm	Metazoa
+Nasonia_vitripennis	35	0	35	379	9.2	Parasitoid wasp	Metazoa
+Melitaea_cinxia	14	0	14	175	8.0	Glanville fritillary (butterfly)	Metazoa
+Meleagris_gallopavo	89	3	86	278	32.0	Common turkey	Metazoa
+Megaselia_scalaris	10	0	10	106	9.4	Humpbacked fly	Metazoa
+Meloidogyne_incognita	14	0	14	315	4.4	Southern root-knot nematode	Metazoa
+Mesocestoides_corti	10	0	10	178	5.6	Tapeworm - parasite of mice	Metazoa
+Globodera_pallida	7	0	7	270	2.6	Nematode - pathogen of potatoes	Metazoa
+Microcebus_murinus	85	0	85	286	29.7	Lesser mouse lemur	Metazoa
+Mnemiopsis_leidyi	12	0	12	320	3.8	Warty comb jelly	Metazoa
+Monodelphis_domestica	155	3	152	400	38.8	Short-tailed gray opossum	Metazoa
+Musca_domestica	54	0	54	231	23.4	Housefly	Metazoa
+Mus_musculus	169	7	162	424	39.9	Mouse	Metazoa
+Mustela_putorius_furo	168	0	168	388	43.3	Ferret	Metazoa
+Myotis_lucifugus	162	0	162	448	36.2	Little brown bat	Metazoa
+Meloidogyne_hapla	10	0	10	239	4.2	Northern root-knot nematode	Metazoa
+Macropus_eugenii	81	0	81	286	28.3	Tammar wallaby	Metazoa
+Macaca_mulatta	169	0	169	417	40.5	Rhesus macaque	Metazoa
+Acanthocheilonema_viteae	13	0	13	207	6.3	Parasitic nematode	Metazoa
+Opisthorchis_viverrini	18	0	18	208	8.7	Southeast Asian liver fluke	Metazoa
+Lepisosteus_oculatus	129	0	129	383	33.7	Spotted gar	Metazoa
+Hydatigera_taeniaeformis	9	0	9	168	5.4	Feline tapeworm	Metazoa
+Gorilla_gorilla	161	0	161	394	40.9	Gorilla	Metazoa
+Heliconius_melpomene	26	0	26	200	13.0	Postman butterfly	Metazoa
+Haemonchus_contortus	34	0	34	325	10.5	Barber pole worm	Metazoa
+Homo_sapiens	221	124	97	461	47.9	Human	Metazoa
+Oreochromis_niloticus	171	0	171	421	40.6	Nile tilapia	Metazoa
+Haemonchus_placei	17	0	17	179	9.5	Parasitic roundworm that infects cattle and sheep	Metazoa
+Heterorhabditis_bacteriophora	3	0	3	125	2.4	Beneficial nematode (used in gardening)	Metazoa
+Helobdella_robusta	26	0	26	442	5.9	Leech	Metazoa
+Heligmosomoides_bakeri	12	0	12	223	5.4	Parasitic nematode	Metazoa
+Halyomorpha_halys	22	0	22	201	10.9	Stink bug	Metazoa
+Gongylonema_pulchrum	10	0	10	256	3.9	Nematode - cause of Gongylonema infection in humans	Metazoa
+Macaca_fascicularis	156	0	156	403	38.7	Crab-eating macaque	Metazoa
+Ictidomys_tridecemlineatus	154	0	154	377	40.8	Striped gopher	Metazoa
+Oryctolagus_cuniculus	167	0	167	409	40.8	Rabbit	Metazoa
+Ixodes_scapularis	18	0	18	214	8.4	Deer tick	Metazoa
+Latimeria_chalumnae	119	0	119	383	31.1	West Indian Ocean coelacanth	Metazoa
+Hymenolepis_nana	10	0	10	200	5.0	Dwarf tapeworm (infects humans)	Metazoa
+Ornithorhynchus_anatinus	94	0	94	311	30.2	Duckbill platypus	Metazoa
+Hymenolepis_microstoma	11	0	11	204	5.4	Rodent tapeworm	Metazoa
+Hymenolepis_diminuta	5	0	5	168	3.0	Rat tapeworm	Metazoa
+Hydra_magnipapillata	13	0	13	293	4.4	Fresh water polp	Metazoa
+Loxodonta_africana	152	0	152	377	40.3	African elephant	Metazoa
+Physcomitrella_patens	22	3	19	406	5.4	Moss	Plants
+Oryza_nivara	41	0	41	478	8.6	Wild rice	Plants
+Phoenix_dactylifera	21	0	21	397	5.3	True date palm	Plants
+Arabidopsis_thaliana	67	5	62	469	14.3	Mouse-ear cress	Plants
+Brassica_oleracea	96	0	96	946	10.1	Wild cabbage	Plants
+Brassica_rapa	89	0	89	733	12.1	Field mustard	Plants
+Mimulus_guttatus	68	0	68	484	14.0	Common monkey flower	Plants
+Oryza_rufipogon	44	0	44	492	8.9	Brownbeard rice	Plants
+Zea_mays	77	0	77	643	12.0	Maize	Plants
+Oryza_punctata	43	0	43	489	8.8	Red rice	Plants
+Theobroma_cacao	55	0	55	508	10.8	Cocoa tree	Plants
+Musa_acuminata	92	0	92	614	15.0	Banana	Plants
+Oryza_glaberrima	41	0	41	459	8.9	African rice	Plants
+Prunus_persica	62	0	62	474	13.1	Peach tree	Plants
+Vitis_vinifera	58	0	58	443	13.1	Common Grape Vine	Plants
+Oryza_meridionalis	40	0	40	442	9.0	Wild rice	Plants
+Triticum_urartu	28	0	28	425	6.6	Red wild einkorn	Plants
+Triticum_aestivum	88	0	88	1298	6.8	Bread wheat	Plants
+Oryza_barthii	36	0	36	470	7.7	African wild rice	Plants
+Oryza_brachyantha	44	0	44	432	10.2	Wild rice	Plants
+Amborella_trichopoda	41	0	41	345	11.9	New Caledonian shrub	Plants
+Oryza_glumaepatula	46	0	46	484	9.5	Wild rice	Plants
+Oryza_indica	40	0	40	635	6.3	Rice	Plants
+Ostreococcus_lucimarinus	6	0	6	132	4.5	Single-celled alga	Plants
+Aquilegia_coerulea	51	0	51	405	12.6	Aquilegia flower	Plants
+Oryza_longistaminata	28	0	28	372	7.5	Longstamen rice	Plants
+Arabidopsis_lyrata	66	0	66	543	12.2	Mustard	Plants
+Oryza_sativa	49	0	49	451	10.9	Rice	Plants
+Panicum_virgatum	94	0	94	1449	6.5	Switchgrass	Plants
+Solanum_tuberosum	65	0	65	533	12.2	Potato	Plants
+Hordeum_vulgare	31	0	31	355	8.7	Barley	Plants
+Malus_domestica	108	0	108	970	11.1	Apple	Plants
+Citrullus_lanatus	50	0	50	337	14.8	Watermelon	Plants
+Citrus_clementina	57	0	57	393	14.5	Clementine tree	Plants
+Citrus_sinensis	55	0	55	384	14.3	Orange tree	Plants
+Leersia_perrieri	45	0	45	434	10.4	Madagascan grass	Plants
+Cucumis_sativus	57	0	57	331	17.2	Cucumber	Plants
+Cyanidioschyzon_merolae	0	0	0	54	0.0	Red alga	Plants
+Solanum_lycopersicum	60	0	60	505	11.9	Tomato	Plants
+Lotus_japonicus	38	0	38	576	6.6	Wild legume	Plants
+Selaginella_moellendorffii	35	0	35	502	7.0	Ancient vascular plant	Plants
+Populus_trichocarpa	89	0	89	679	13.1	Black cottonwood/california poplar	Plants
+Sorghum_bicolor	52	0	52	565	9.2	Sorghum (drought-tolerant African grass)	Plants
+Prunus_mume	54	0	54	418	12.9	Plum tree	Plants
+Setaria_italica	46	0	46	486	9.5	Foxtail millet	Plants
+Linum_usitatissimum	85	0	85	701	12.1	Flax	Plants
+Ricinus_communis	54	0	54	379	14.2	Castor oil plant	Plants
+Capsella_grandiflora	67	0	67	449	14.9	Close relative of Arabidopsis thaliana	Plants
+Carica_papaya	40	0	40	363	11.0	Papaya	Plants
+Medicago_truncatula	68	0	68	521	13.1	Barrel Clover (legume)	Plants
+Gossypium_raimondii	109	0	109	626	17.4	Diploid cotton tree	Plants
+Cannabis_sativa	60	33	27	406	14.8	Marijuana	Plants
+Fragaria_vesca	58	0	58	489	11.9	Wild strawberry	Plants
+Eutrema_salsugineum	58	0	58	488	11.9	Salt cress	Plants
+Eucalyptus_grandis	61	0	61	447	13.6	Flooded gum tree	Plants
+Brachypodium_distachyon	48	0	48	477	10.1	Purple false brome (grass)	Plants
+Manihot_esculenta	128	0	128	877	14.6	Cassava (woody shrub)	Plants
+Glycine_max	134	0	134	989	13.5	Soybean	Plants
+Salix_purpurea	113	0	113	651	17.4	Purple willow	Plants
+Chlamydomonas_reinhardtii	4	0	4	132	3.0	Chlamydomonas	Plants
+Giardia_lamblia	0	0	0	38	0.0	Giardia lamblia	Protists
+Paramecium_tetraurelia	2	0	2	442	0.5	Ciliate	Protists
+Trypanosoma_cruzi	15	0	15	137	10.9	Trypanosoma cruzi	Protists
+Entamoeba_histolytica	0	0	0	117	0.0	Entamoeba (animal parasite)	Protists
+Salpingoeca_rosetta	3	0	3	188	1.6	Choanoflagellate	Protists
+Leishmania_major	28	21	7	152	18.4	Leishmania major	Protists
+Leishmania_infantum	27	0	27	158	17.1	Protist (human parasite)	Protists
+Leishmania_braziliensis	24	0	24	157	15.3	Protist (human parasite)	Protists
+Saprolegnia_parasitica	1	0	1	197	0.5	Water mold	Protists
+Oxytricha_trifallax	0	0	0	248	0.0	Ciliate protozoan	Protists
+Eimeria_tenella	0	0	0	140	0.0	Causes cecal coccidiosis in young poultry	Protists
+Entamoeba_dispar	0	0	0	123	0.0	Entamoeba (animal parasite)	Protists
+Entamoeba_invadens	0	0	0	156	0.0	Entamoeba (animal parasite)	Protists
+Leishmania_mexicana	27	0	27	157	17.2	Protist (human parasite)	Protists
+Cryptosporidium_hominis	1	0	1	68	1.5	Protist (human parasite)	Protists
+Dictyostelium_purpureum	6	0	6	141	4.3	Slime mold	Protists
+Plasmodium_knowlesi	11	0	11	105	10.5	Protist (animal parasite)	Protists
+Monosiga_brevicollis	2	0	2	137	1.5	Choanoflagellate	Protists
+Plasmodium_falciparum	13	12	1	104	12.5	Malaria	Protists
+Plasmodium_chabaudi	11	0	11	103	10.7	Protist (animal parasite)	Protists
+Plasmodium_berghei	11	0	11	102	10.8	Protist (animal parasite)	Protists
+Toxoplasma_gondii	1	0	1	145	0.7	Toxoplasma gondii	Protists
+Phytophthora_capsici	4	0	4	170	2.4	Plant pathogen	Protists
+Thecamonas_trahens	1	0	1	128	0.8	Gliding zooflagellate	Protists
+Capsaspora_owczarzaki	2	0	2	139	1.4	Protist (snail symbiont)	Protists
+Tetrahymena_thermophila	0	0	0	222	0.0	Ciliate	Protists
+Theileria_parva	0	0	0	86	0.0	Cattle Parasite	Protists
+Babesia_bovis	1	0	1	85	1.2	Cattle Parasite	Protists
+Plasmodium_vivax	11	0	11	103	10.7	Protist (animal parasite)	Protists
+Dictyostelium_discoideum	6	4	2	143	4.2	Slime mold	Protists
+Trypanosoma_vivax	8	0	8	144	5.6	Protist (animal parasite)	Protists
+Trypanosoma_congolense	21	0	21	166	12.7	Protist (animal parasite)	Protists
+Trypanosoma_brucei	24	15	9	149	16.1	Trypanosoma brucei	Protists
+Polysphondylium_pallidum	5	0	5	160	3.1	Cellular slime mold	Protists
+Neospora_caninum	0	0	0	147	0.0	Protist (animal parasite)	Protists
+Naegleria_gruberi	1	1	0	324	0.3	Amoeba	Protists
+Cryptosporidium_parvum	1	0	1	78	1.3	Cryptosporidium parvum	Protists
+Cryptosporidium_muris	0	0	0	86	0.0	Protist (human parasite)	Protists
+Trichomonas_vaginalis	7	6	1	212	3.3	Trichomonas vaginalis	Protists
+Plasmodium_yoelii	10	0	10	97	10.3	Protist (animal parasite)	Protists
+Theileria_annulata	1	0	1	89	1.1	Cattle Parasite	Protists
