@@ -1,0 +1,1 @@
+Leave-one-out cross-validation with nearest neighbor method. Distance between protein k-mer vectors is measured by cosine distance (best distance measure that we found). 
