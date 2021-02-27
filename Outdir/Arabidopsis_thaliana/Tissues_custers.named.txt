@@ -1,0 +1,69 @@
+Anthers of the mature flower (F.AN.ad)	Anthers
+Opened Anthers (F.AN)	Anthers
+Flowers 9-11 (F9-11)	Young flowers
+Carpels of the young flower (F.CA.y)	Young flowers
+Flowers 12-14 (F12-14)	Young flowers
+Flowers 15-18 (F15-18)	Young flowers
+Flowers 19 and following (F19+)	Young flowers
+Seedling Cotyledons (S.C)	Young leafs
+Leaf Lamina of the young leaf (L.LAM.y)	Young leafs
+Leaf Lamina, intermediate 1 (L.LAM.i1)	Young leafs
+Leaf Petiole, intermediate 2 (L.PET.i2)	Young leafs
+Leaf Lamina, intermediate 2 (L.LAM.i2)	Young leafs
+Leaf Vein, intermediate 2 (L.VN.i2)	Young leafs
+Leaf Petiole of the young leaf (L.PET.y)	Young leafs
+Leaf Petiole, intermediate 1 (L.PET.i1)	Young leafs
+Sepals of the young flower (F.SP.y)	Young leafs
+Axis of the inflorescence (AX)	Young leafs
+Pedicel (PED)	Young leafs
+Leaf Petiole of the senescent leaf (L.PET.sn)	Senescent leafs
+Leaf Vein of the senescent leaf (L.VN.sn)	Senescent leafs
+Dry Seeds (SD.d)	Dry seeds
+Seeds from the senescent silique 1 (SD.sn1)	Dry seeds
+Seeds 1 (SD1)	Seeds
+Pod of the silique 1 (POD1)	Seeds
+Pod of the silique 3 (POD3)	Seeds
+Pod of the silique 5 (POD5)	Seeds
+Pod of the silique 7 (POD7)	Seeds
+Silique 8 (SL8)	Seeds
+Silique 2 (SL2)	Seeds
+Silique 4 (SL4)	Seeds
+Silique 6 (SL6)	Seeds
+Seeds 7 (SD7)	Seeds
+Seeds 3 (SD3)	Seeds
+Seeds 5 (SD5)	Seeds
+Petals of the mature flower (F.PT.ad)	Filament flower
+Stamen filaments of the mature flower (F.FM.ad)	Filament flower
+Leaf Lamina of the mature leaf (L.LAM.lg)	Leaf
+Leaf, mature (L.lg)	Leaf
+Leaf Petiole of the mature leaf (L.PET.lg)	Leaf
+Leaf Vein of the mature leaf (L.VN.lg)	Leaf
+Root (R )	Root
+Root Apex (R.A)	Root
+Seedling Root (S.R)	Root
+Flower 1 (F1)	Mature flower
+Flower 2 (F2)	Mature flower
+Flower 5 (F5)	Mature flower
+Flowers 6-8 (F6-8)	Mature flower
+Flower 3 (F3)	Mature flower
+Flower 4 (F4)	Mature flower
+Young seeds 5 (SD.y5)	Young seeds
+Young seeds 4 (SD.y4)	Young seeds
+Young seeds 3 (SD.y3)	Young seeds
+Young seeds 1 (SD.y1)	Young seeds
+Young seeds 2 (SD.y2)	Young seeds
+Carpel of 6th and 7th flowers (POD.y6-7)	Young seeds
+Carpels of the mature flower (F.CA.ad)	Young seeds
+Ovules from 6th and 7th flowers (OV.y6-7)	Young seeds
+Anthers of the young flower (F.AN.y)	Anthers of the young flower
+Germinating seeds 1 (SD.g1)	Germinating seeds 1
+Germinating seeds 2 (SD.g2)	Germinating seeds 2
+Germinating seeds 3 (SD.g3)	Germinating seeds 3
+Internode (IN)	Internode
+Pod of the senescent silique 1 (POD.sn1)	Pod of the senescent silique
+Seedling Hypocotyl (S.H)	Seedling Hypocotyl
+Seedling Meristem (S.M)	Seedling Meristem
+Senescent internode (IN.sn)	Senescent internode
+Senescent silique 2 (SL.sn2)	Senescent silique
+Sepals of the mature flower (F.SP.ad)	Sepals of the mature flower
+Stigmatic tissue (STI)	Stigmatic tissue

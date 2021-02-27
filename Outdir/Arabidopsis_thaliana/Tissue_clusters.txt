@@ -1,0 +1,69 @@
+Anthers of the mature flower (F.AN.ad)	0
+Opened Anthers (F.AN)	0
+Flowers 9-11 (F9-11)	1
+Carpels of the young flower (F.CA.y)	1
+Flowers 12-14 (F12-14)	1
+Flowers 15-18 (F15-18)	1
+Flowers 19 and following (F19+)	1
+Seedling Cotyledons (S.C)	2
+Leaf Lamina of the young leaf (L.LAM.y)	2
+Leaf Lamina, intermediate 1 (L.LAM.i1)	2
+Leaf Petiole, intermediate 2 (L.PET.i2)	2
+Leaf Lamina, intermediate 2 (L.LAM.i2)	2
+Leaf Vein, intermediate 2 (L.VN.i2)	2
+Leaf Petiole of the young leaf (L.PET.y)	2
+Leaf Petiole, intermediate 1 (L.PET.i1)	2
+Sepals of the young flower (F.SP.y)	2
+Axis of the inflorescence (AX)	2
+Pedicel (PED)	2
+Leaf Petiole of the senescent leaf (L.PET.sn)	3
+Leaf Vein of the senescent leaf (L.VN.sn)	3
+Dry Seeds (SD.d)	4
+Seeds from the senescent silique 1 (SD.sn1)	4
+Seeds 1 (SD1)	5
+Pod of the silique 1 (POD1)	5
+Pod of the silique 3 (POD3)	5
+Pod of the silique 5 (POD5)	5
+Pod of the silique 7 (POD7)	5
+Silique 8 (SL8)	5
+Silique 2 (SL2)	5
+Silique 4 (SL4)	5
+Silique 6 (SL6)	5
+Seeds 7 (SD7)	5
+Seeds 3 (SD3)	5
+Seeds 5 (SD5)	5
+Petals of the mature flower (F.PT.ad)	6
+Stamen filaments of the mature flower (F.FM.ad)	6
+Leaf Lamina of the mature leaf (L.LAM.lg)	7
+Leaf, mature (L.lg)	7
+Leaf Petiole of the mature leaf (L.PET.lg)	7
+Leaf Vein of the mature leaf (L.VN.lg)	7
+Root (R )	8
+Root Apex (R.A)	8
+Seedling Root (S.R)	8
+Flower 1 (F1)	9
+Flower 2 (F2)	9
+Flower 5 (F5)	9
+Flowers 6-8 (F6-8)	9
+Flower 3 (F3)	9
+Flower 4 (F4)	9
+Young seeds 5 (SD.y5)	10
+Young seeds 4 (SD.y4)	10
+Young seeds 3 (SD.y3)	10
+Young seeds 1 (SD.y1)	10
+Young seeds 2 (SD.y2)	10
+Carpel of 6th and 7th flowers (POD.y6-7)	10
+Carpels of the mature flower (F.CA.ad)	10
+Ovules from 6th and 7th flowers (OV.y6-7)	10
+Anthers of the young flower (F.AN.y)	11
+Germinating seeds 1 (SD.g1)	12
+Germinating seeds 2 (SD.g2)	13
+Germinating seeds 3 (SD.g3)	14
+Internode (IN)	15
+Pod of the senescent silique 1 (POD.sn1)	16
+Seedling Hypocotyl (S.H)	17
+Seedling Meristem (S.M)	18
+Senescent internode (IN.sn)	19
+Senescent silique 2 (SL.sn2)	20
+Sepals of the mature flower (F.SP.ad)	21
+Stigmatic tissue (STI)	22
