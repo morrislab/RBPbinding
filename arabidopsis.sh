@@ -33,33 +33,41 @@ supfig=${fig}'Supplementary/'
 # Degradation rate extracted by make_degradation-rate.py as the log(delta_exon)-log(delta_intron) - bias(delta_intro) 
 # See for details: Alkallas, Rached, et al. "Inference of RNA decay rate from transcriptional profiling highlights the regulatory programs of Alzheimer’s disease." Nature communications 8.1 (2017): 1-11. https://www.nature.com/articles/s41467-017-00867-z
 
-stability=${outdir}'StabilityAT'
+stability=${outdir}'Arabidopsis_thaliana/'
 mkdir $stability
 degradationrate=${stability}'Degradation_rate.npz'
 exonexpression=${stability}'Exon_expression_rate.npz'
 atpwms=${stability}'Arabidopsis_thaliana_Reconstructionjplesvd122_svdsignificant_response122_confidence0.127.hmot'
 at3putr=${stability}'Arabidopsis_thaliana.TAIR10.three_prime_utr.single_exon.longest_isoform.npz'
 rbpexpression=${stability}'RBPs_Exon_expression_rate.npz'
-atgeneset=${stability}'AT_highcorr_geneset.txt'
+atgeneset=${stability}'AT_highcorr_geneset_degradation.txt'
 atnames=${stability}'Arabidopsis_thaliana_proteinnames.txt'
 # Make RBP expression file
 #python rbp_expression_file.py Arabidopsis_thaliana_Reconstructionjplesvd122_svdsignificant_response122_confidence0.127.hmot Arabidopsis_thaliana_proteinnames.txt Exon_expression_rate.npz
-
-
-# Give tissue clusters names manually
+# Semi-manually given tissue clusters
 tisclust='Tissues_custers.named.txt'
+
+
+full=0
+
+if [ $full = 1 ]; then
 # Scan 3'UTR sequences with PWM for potential binding sites
-python Scripts/scanFastaWithPWMregions.py $at2putr $atpwms AT.single_exon.longest_isoform_101pwmscan.npz --summax 0.1 --geneset $atgeneset
+python Scripts/scanFastaWithPWMregions.py $at3putr $atpwms ${stability}AT.single_exon.longest_isoform_101pwmscan.npz --summax 0.1 --geneset $atgeneset
+fi
 # Perform correlation analysis
-python Scripts/GeneExpressioncorrelationAnalysis.py $degradationrate AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1.npz $rbpexpression --correlationanalysis all 500 False optimal correlation --tissuemean SraRunTable.txt --lognorm_rbpexpression --outname stability --npz 
+python Scripts/GeneExpressioncorrelationAnalysis.py $degradationrate ${stability}AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1.npz $rbpexpression --correlationanalysis all 500 False optimal correlation --tissuemean ${stability}SraRunTable.txt --lognorm_rbpexpression --outname stability --npz 
+
+if [ $full = 1 ]; then
 # Scan 100 shuffled 3'UTRs
-for i in {0..100}; do submitjob python scanFastaWithPWMregions.py $at2putr $atpwms AT.single_exon.longest_isoform_101pwmscan.npz --summax 0.1 --geneset AT_highcorr_geneset.txt --random_shuffle $i; done
+for i in {0..100}; do python Scritps/scanFastaWithPWMregions.py $at3putr $atpwms ${stability}AT.single_exon.longest_isoform_101pwmscan.npz --summax 0.1 --geneset $atgeneset --random_shuffle $i; done
 # Perform correlation analysis for shuffled sets
-for i in {0..100}; do submitjob python Scripts/GeneExpressioncorrelationAnalysis.py $degradationrate AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1_random_shuffle${i}.npz $rbpexpression --correlationanalysis all 500 False optimal correlation --tissuemean ../SraRunTable.txt --lognorm_rbpexpression --outname stability ; done
+for i in {0..100}; do python Scripts/GeneExpressioncorrelationAnalysis.py $degradationrate ${stability}AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1_random_shuffle${i}.npz $rbpexpression --correlationanalysis all 500 False optimal correlation --tissuemean ${stability}SraRunTable.txt --lognorm_rbpexpression --outname stability ; done
 # Determine RBPs that signifianctly change the distribution
-python Scripts/z_of_zscore.py AT.longest_isoform_101pwmscan_full-summaxgt0.1_random_shuffle:-out-tissuemean_correlation_all_optimal500.0False_correlationanalysis.txt 100 AT.single_exon.longest_isoform_101pwmscan_full-summaxgt0.1-out-tissuemean_correlation_all_optimal500.0False_correlationanalysis.txt 0.05 0.1
+python Scripts/z_of_zscore.py ${stability}AT.longest_isoform_101pwmscan-summaxgt0.1_random_shuffle:-stability-tissuemean_correlation_all_optimal500.0False_correlationanalysis.txt 100 ${stability}AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1-stability-tissuemean_correlation_all_optimal500.0False_correlationanalysis.txt 0.05 0.1
+fi
+
 # Determine target sequences that correlate with RBPs expression (bona fide targets)
-python Scripts/target_sets.py AT.single_exon.longest_isoform_101pwmscan_full-summaxgt0.1-out-tissuemean_correlation_all_optimal500.0False_correlationanalysis.npz AT.single_exon.longest_isoform_101pwmscan_full-summaxgt0.1-out-tissuemean_correlation_all_optimal500.0False_correlationanalysis-fdr0.1_zofz0.05.pvals 1,-1 $atnames $atpwms --cut 0.2
+python Scripts/target_sets.py ${stability}AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1-stability-tissuemean_correlation_all_optimal500.0False_correlationanalysis.npz ${stability}AT.single_exon.longest_isoform_101pwmscan-summaxgt0.1-stability-tissuemean_correlation_all_optimal500.0False_correlationanalysis-fdr0.1_zofz0.05.pvals 1,-1 $atnames $atpwms --cut 0.2
 
 atsig='AT.single_exon.longest_isoform_101pwmscan_full-summaxgt0.1-out-tissuemean_correlation_all_optimal500.0False_correlationanalysis-fdr0.1_zofz0.05.pvals'
 atout='AT.single_exon.longest_isoform_101pwmscan_full-summaxgt0.1-out-tissuemean_correlation_all_optimal500.0False_correlationanalysis.npz'
