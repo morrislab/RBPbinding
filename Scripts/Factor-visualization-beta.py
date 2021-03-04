@@ -590,16 +590,21 @@ if __name__ == '__main__':
     proteinfeatures = sys.argv[2]
     proteinset =  sys.argv[3]
     maxnum = int(sys.argv[4])
-    outname = os.path.splitext(profiles)[0]+'_'+os.path.splitext(os.path.split(proteinfeatures)[1])[0]
+    if '--outdir' in sys.argv:
+        outdir = sys.argv[sys.argv.index('--outdir')+1]
+    else:
+        outdir = os.path.split(proteinfeatures)[0]
+    outname = outdir+'/'+os.path.splitext(os.path.split(profiles)[1])[0]+'_'+os.path.splitext(os.path.split(proteinfeatures)[1])[0]
 
     Y, datnames, zfeatures, P, pnames, pfeatures = readin(proteinfeatures, profiles, proteinset = proteinset)
-    XY = np.append(P,Y, axis = 1)
     
     if '--normP2' in sys.argv:
         P = P/np.sqrt(np.sum(P*P, axis = 1))[:, None]
     if '--normY2' in sys.argv:
         Y = Y/np.sqrt(np.sum(Y*Y, axis = 1))[:, None]
-    
+
+    XY = np.append(P,Y, axis = 1)
+
     # SVD for concatenated specificity and sequence k-mers
     u,s,v = np.linalg.svd(XY, full_matrices=False)
     

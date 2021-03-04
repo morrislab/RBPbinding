@@ -72,6 +72,11 @@ rbpcolors = np.zeros(len(pset), dtype = int)
 rbpcolors[zscores > 0] = 1
 rbpcolors[zscores < 0] = 2
 
+if '--outdir' in sys.argv:
+    outdir = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[1])[1])[0]
+else:
+    outdir = os.path.splitext(sys.argv[1])[0]
+
 
 nameset = []
 for p, pr in enumerate(setprotnames):
@@ -309,8 +314,8 @@ if np.shape(sigpmat)[1] > 1:
 
 
     if '--savefig' in sys.argv:
-        fig.savefig(os.path.splitext(sys.argv[1])[0]+'-goprocess-targets.jpg', bbox_inches = 'tight', dpi = 300)
-        print os.path.splitext(sys.argv[1])[0]+'-goprocess-targets.jpg' 
+        fig.savefig(outdir+'-goprocess-targets.jpg', bbox_inches = 'tight', dpi = 300)
+        print outdir+'-goprocess-targets.jpg' 
 
 if np.shape(sigfmat)[1] > 1:
     fmask = np.where(np.sum(sigfmat > -0.02, axis = 1) > 0)[0]
@@ -392,7 +397,7 @@ if np.shape(sigfmat)[1] > 1:
 
 
     if '--savefig' in sys.argv:
-        fig2.savefig(os.path.splitext(sys.argv[1])[0]+'-gofunction-targets.jpg', bbox_inches = 'tight', dpi = 300)
+        fig2.savefig(outdir+'-gofunction-targets.jpg', bbox_inches = 'tight', dpi = 300)
 
 
 
@@ -478,10 +483,10 @@ if np.shape(sigcmat)[1] > 1:
                 ax.text(j,i, str(np.around(sortedmat[i,j]*100,1)), color = 'white', va = 'center', ha = 'center')
 
     if '--savefig' in sys.argv:
-        fig3.savefig(os.path.splitext(sys.argv[1])[0]+'-gocomponent-targets.jpg', bbox_inches = 'tight', dpi = 300)
+        fig3.savefig(outdir+'-gocomponent-targets.jpg', bbox_inches = 'tight', dpi = 300)
 
-
-plt.show()
+if '--savefig' not in sys.argv:
+    plt.show()
     
 
 

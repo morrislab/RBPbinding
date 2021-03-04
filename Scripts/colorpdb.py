@@ -321,8 +321,8 @@ for i, pchain in enumerate(protchains):
     pdbbinscore = (pdbscore > scorecut).astype(int)    
     print 'Identity to template', sid/float(len(alignment[0][0])), sid/float(len(aaseqs[i])), sid/float(len(scseq)), sid
     print 'matching scorepositions', sclen
-    print 'written', scorename+'_to_'+os.path.split(pdb)[1][:4]+'_'+pchain+'_'+rnachains[0]+os.path.splitext(os.path.split(scorefile)[1])[0]+'.pdb'
-    pobj =open(scorename+'_to_'+os.path.split(pdb)[1][:4]+'_'+pchain+'_'+rnachains[0]+os.path.splitext(os.path.split(scorefile)[1])[0]+'.pdb', 'w')
+    print 'written', os.path.split(scorefile)[0]+'/'+scorename+'_to_'+os.path.split(pdb)[1][:4]+'_'+pchain+'_'+rnachains[0]+os.path.splitext(os.path.split(scorefile)[1])[0]+'.pdb'
+    pobj =open(os.path.split(scorefile)[0]+'/'+scorename+'_to_'+os.path.split(pdb)[1][:4]+'_'+pchain+'_'+rnachains[0]+os.path.splitext(os.path.split(scorefile)[1])[0]+'.pdb', 'w')
     for hline in header:
         pobj.write(hline)
     curaa = 0

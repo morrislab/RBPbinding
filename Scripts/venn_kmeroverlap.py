@@ -53,13 +53,17 @@ for g, group in enumerate(groups):
 
 
 
-
-
+if '--outdir' in sys.argv:
+    outdir = sys.argv[sys.argv.index('--outdir')+1]
+else:
+    outdir = os.path.split(sys.argv[2])[0]
 # First way to call the 2 group Venn diagram:
 #venn2(subsets = (10, 5, 2), set_labels = ('Group A', 'Group B'))
 #plt.show()
-
-venn2([set(groupkmer[0]), set(groupkmer[1])], set_labels = groups, set_colors = ['royalblue', 'olive'])
+fig = plt.figure(figsize = (4,4))
+ax = fig.add_subplot(111)
+venn2([set(groupkmer[0]), set(groupkmer[1])], set_labels = groups, set_colors = ['royalblue', 'olive'], ax = ax)
+fig.savefig(outdir+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+'-'.join(np.array(groups))+'_vennkmer.jpg', bbox_inches = 'tight', dpi = 300)
 plt.show()
 
 

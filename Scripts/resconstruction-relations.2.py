@@ -167,8 +167,13 @@ ythreshold = float(sys.argv[4])
 fig2 = plotdistribution(jpledistance[:,-1].astype(float), sequence_maxseqid[:,-1].astype(float), xticks = None, xticklabels = None, yticks = None, yticklabels = None, xlabel = 'JPLE latent distance', ylabel = 'Closest Seq ID', plotdist = True, style = 'hist2d', countscale = 'linear', title = 'Reconstruction 692 eukaryotes',xlim = [0.,1.0], ylim = [0,100], xtresh = [-.1, xthreshold], ytresh = [ythreshold, 110] )
 
 
+if '--outdir' in sys.argv:
+    outdir = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[1])[1])[0]
+else:
+    outdir = os.path.splitext(sys.argv[1])[0]
+
 if '--savefig' in sys.argv:
-    fig2.savefig(os.path.splitext(sys.argv[1])[0]+'cosine-closeid.jpg', dpi = 200, bbox_inches = 'tight', transparent=True)
+    fig2.savefig(outdir+'cosine-closeid.jpg', dpi = 300, bbox_inches = 'tight', transparent=True)
 else:
     plt.show()
 

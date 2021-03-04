@@ -37,7 +37,7 @@ if __name__ == "__main__":
     #>Chr1:5680-5730 Parent=AT1G01010.1 block2len50
     #TTTTTTTTGTTTTTTTTTCTTTGCTCTGTTTTCTCGCTCCGGAAAAGTTT
 
-    fastafile = np.load(sys.argv[1])
+    fastafile = np.load(sys.argv[1], allow_pickle = True)
     ids = fastafile['ids']
     sequences = fastafile['sequences']    
     

@@ -5,6 +5,11 @@ import matplotlib.pyplot as plt
 
 numsets = int(sys.argv[1])
 
+if '--outname' in sys.argv:
+    outname = sys.argv[sys.argv.index('--outname')+1]
+else:
+    outname = ''
+
 x = []
 y = []
 pairname = []
@@ -115,8 +120,8 @@ ylims = ax.get_ylim()
 if '--selfcorr' in sys.argv:
     axself.set_ylim(ylims)
 
-fig.savefig(os.path.splitext(os.path.split(sys.argv[3])[1])[0]+'-vs-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+add+'.jpg', bbox_inches = 'tight', transparent=True, dpi = 300)
-print os.path.splitext(os.path.split(sys.argv[3])[1])[0]+'-vs-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+add+'.jpg'
+fig.savefig(outname+os.path.splitext(os.path.split(sys.argv[3])[1])[0]+'-vs-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+add+'.jpg', bbox_inches = 'tight', transparent=True, dpi = 300)
+print outname+os.path.splitext(os.path.split(sys.argv[3])[1])[0]+'-vs-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+add+'.jpg'
 #fig.tight_layout()
 plt.show()
 

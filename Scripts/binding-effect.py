@@ -56,7 +56,10 @@ rbpnames=efile['rbpnames']
 genes=efile['genes']
 
 pset = np.genfromtxt(sys.argv[2], dtype = str)
-outname = os.path.splitext(sys.argv[2])[0]
+if '--outdir' in sys.argv:
+    outname = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[2])[1])[0]
+else:
+    outname = os.path.splitext(sys.argv[2])[0]
 crow, srow = sys.argv[3].split(',')
 pnames = np.genfromtxt(sys.argv[4], dtype = str)
 pwmfile = sys.argv[5]

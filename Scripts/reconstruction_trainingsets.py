@@ -63,7 +63,7 @@ outname = os.path.splitext(sys.argv[1])[0]
 simfile= sys.argv[2]
 if simfile != "None":
     simcuts = float(sys.argv[3])
-    outname += '-'+os.path.splitext(sys.argv[2])[0]+str(simcuts)
+    outname += '-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+str(simcuts)
     snames, smat, prots = readin(sys.argv[2], 'both', pset[1])
 
 # idfile contains identities and can be used to filter for proteins with a certain identity in training set

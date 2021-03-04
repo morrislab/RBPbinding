@@ -291,27 +291,18 @@ if __name__ == '__main__':
     
 
     
-    
-    
-    
-    fig.savefig('Arabidopsis_tissue_expression_correlation_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
-    figtdist.savefig('Arabidopsis_tissue_expression_distributionzoom_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
-    figpdist.savefig('Arabidopsis_gene_expression_correlation_distribution_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
-    figtdists.savefig('Arabidopsis_tissue_replicate_correlation_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
-    figtdif.savefig('Arabidopsis_tissue_replicatedifference_correlation_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
-    
-    
-    
-    
-    #plt.show()
-    
-    
-    ### stats for 3'utrs
-        # len vs n binding sites
-        # len vs n rbp
+    if '--outdir' in sys.argv:
+        outdir = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[1])[1])[0]
+    else:
+        outdir = os.path.splitext(sys.argv[1])[0]
 
-
-
-
+    
+    
+    fig.savefig(outdir+'_correlationmat_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
+    figtdist.savefig(outdir+'_distributionzoom_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
+    figpdist.savefig(outdir+'_correlation_distribution_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
+    figtdists.savefig(outdir+'_replicate_correlation_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
+    figtdif.savefig(outdir+'_replicatedifference_correlation_'+valuename+'.jpg', dpi = 250, bbox_inches = 'tight')
+    
     
     

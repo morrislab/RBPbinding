@@ -53,7 +53,6 @@ ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 fig.savefig(outdir+'Piekingdom.jpg', dpi = 300, bbox_inches = 'tight')
 
-plt.show()
 
 reccolors = [(.9,0.6,0.3,.9), (.4,0.1,0.4,.9), (.3,0.7,0.3,.9), (.6,0.2,0.2,.9)]
 recognizedtypes = [cladetotal[i]+' '+str(old[i])+'+'+str(new[i])+'='+str(total[i]) for i in range(len(total))]

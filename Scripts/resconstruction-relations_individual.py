@@ -152,6 +152,10 @@ uniquemotifs = np.unique(data[:,1])
 cladecolor = ['firebrick', 'darkgoldenrod', 'seagreen', 'darkslateblue']
 clade = ['Fungi', 'Metazoa', 'Plants', 'Protist']
 
+if '--outdir' in sys.argv:
+    outdir = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[1])[1])[0]
+else:
+    outdir = os.path.splitext(sys.argv[1])[0]
 
 for u, unmot  in enumerate(uniquemotifs):
     ploc = list(proteinnames[:,1]).index(unmot)
@@ -160,9 +164,10 @@ for u, unmot  in enumerate(uniquemotifs):
 
     fig1 = plotdistribution(data[data[:,1]==unmot,3].astype(float), data[data[:,1]==unmot,2].astype(float), xticks = None, xticklabels = None, xlim = [0.,1.0], ylim = [0,100], yticks = None, yticklabels = None, xlabel = 'JPLE latent distance', ylabel = 'Seq ID', plotdist = False, style = 'scatter', countscale = 'log', title = title, xtresh = [-.1, xthreshold], ytresh = [ythreshold, 110])
         
+
     if '--savefig' in sys.argv:
         print os.path.splitext(sys.argv[1])[0]+'-'+unmot+'cosine-id.jpg'
-        fig1.savefig(os.path.splitext(sys.argv[1])[0]+'-'+unmot+'cosine-id.jpg', dpi = 200, bbox_inches = 'tight', transparent=True)
+        fig1.savefig(outdir+'-'+unmot+'cosine-id.jpg', dpi = 200, bbox_inches = 'tight', transparent=True)
     else:
         plt.show()
             

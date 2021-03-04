@@ -25,7 +25,12 @@ for c, cfile in enumerate(consfile):
 #print sequences
 #print conservation
 
-wobj = open('Conservation'+os.path.splitext(os.path.split(sys.argv[1])[1])[0]+'.txt', 'w')
+if '--outdir' in sys.argv:
+    outdir = sys.argv[sys.argv.index('--outdir')+1]
+else:
+    outdir = os.path.split(sys.argv[1])[0]
+
+wobj = open(outdir+'Conservation'+os.path.splitext(os.path.split(sys.argv[1])[1])[0]+'.txt', 'w')
 for n, name in enumerate(names):
     conservation[n][conservation[n] == -1000] = np.amin(conservation[n][conservation[n] != -1000])
     wobj.write('>'+name+'\n'+sequences[n]+'\n'+','.join(np.array(conservation[n],dtype = str))+'\n')

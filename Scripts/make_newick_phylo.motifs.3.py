@@ -1033,7 +1033,7 @@ if __name__ == '__main__':
         #ac.set_title('Top 100 overlap')
         ac.set_title('Pearson R')
         coname = 'Pearson_colorbar.jpg' #'Top100_colorbar.jpg'
-        colorbar.savefig(coname, dpi = 300,bbox_inches = 'tight')
+        colorbar.savefig(outname+coname, dpi = 300,bbox_inches = 'tight')
         print 'colorbar saved'
         
         

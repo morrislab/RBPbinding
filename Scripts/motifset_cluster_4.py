@@ -1130,6 +1130,7 @@ if __name__ == '__main__':
         
         colorfactor = dfactors[:, numfactors]
         colorfactor = colorfactor.T
+        print sys.argv[sys.argv.index('--color_factorplot')+5], os.path.isfile(sys.argv[sys.argv.index('--color_factorplot')+5])
         if len(sys.argv) > sys.argv.index('--color_factorplot')+5 and os.path.isfile(sys.argv[sys.argv.index('--color_factorplot')+5]):
             proteinnames = np.genfromtxt(sys.argv[sys.argv.index('--color_factorplot')+5], dtype = str)
             protext = []

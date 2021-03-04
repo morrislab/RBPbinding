@@ -53,9 +53,15 @@ if '--legend' in sys.argv:
             else:
                 ax.text(x[s], y[s], pnames[list(pnames[:,0]).index(znames[s]), 3], va = va, ha = ha)
 
+if '--outdir' in sys.argv:
+    outdir = sys.argv[sys.argv.index('--outdir')+1]
+else:
+    outdir = os.path.split(sys.argv[1])[0]
 
-fig.savefig(os.path.splitext(sys.argv[1])[0]+'row'+str(rows[-1])+'_'+addname+'-zversusz.jpg', dpi = 300, bbox_inches = 'tight')
-plt.show()
+if '--savefig' in sys.argv:
+    fig.savefig(outdir+os.path.splitext(os.path.split(sys.argv[1])[1])[0]+'row'+str(rows[-1])+'_'+addname+'-zversusz.jpg', dpi = 300, bbox_inches = 'tight')
+else:
+    plt.show()
 
 
 

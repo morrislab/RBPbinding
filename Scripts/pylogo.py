@@ -34,7 +34,10 @@ def ic(pw):
 pnames, pwwm = readinpwm(sys.argv[1])
 #print pnames, pwwm
 
-outname = os.path.splitext(os.path.split(sys.argv[1])[1])[0]
+if '--outdir' in sys.argv:
+    outname = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[1])[1])[0]
+else:
+    outname = os.path.splitext(sys.argv[1])[0]
 if '--infocont' in sys.argv:
     outname += '-infocont'
 
@@ -68,7 +71,7 @@ for p, pname in enumerate(pnames):
     
     #fig.tight_layout()
     
-    dpi = 200
+    dpi = 300
     
     print 'Saved as', outname+'_'+pname+'.jpg'
     if '--transparent' in sys.argv:

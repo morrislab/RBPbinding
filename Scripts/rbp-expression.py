@@ -69,7 +69,8 @@ if not np.array_equal(tissues, etissues):
     print 'Tissues are not equal', np.array_equal(tissues, etissues)
     sys.exit()
 
-tfile = open('SraRunTable.txt', 'r').readlines()
+tfile = open(sys.argv[7], 'r').readlines()
+print sys.argv[7]
 tissueid = []
 for l, line in enumerate(tfile):
     if l> 0:
@@ -91,7 +92,11 @@ print 'mean tissue', np.shape(rbpexpression)
 
 
 pset = np.genfromtxt(sys.argv[3], dtype = str)
-folder = os.path.splitext(sys.argv[3])[0]
+
+if '--outdir' in sys.argv:
+    folder = sys.argv[sys.argv.index('--outdir')+1]+os.path.splitext(os.path.split(sys.argv[3])[1])[0]
+else:
+    folder = os.path.splitext(sys.argv[3])[0]
 crow, srow = sys.argv[4].split(',')
 pnames = np.genfromtxt(sys.argv[5], dtype = str)
 pwmfile = sys.argv[6]
@@ -360,10 +365,11 @@ axe.set_yticks(np.arange(len(nameset))+1)
 axe.set_yticklabels(nameset[sorting], rotation = 0)
 axe.set_xlabel('RPKM')
 
-
-fig.savefig(folder+add+'-ex.jpg', bbox_inches = 'tight', dpi = 300)
-figexp.savefig(folder+add+'-exbbox.jpg', bbox_inches ='tight', dpi =300)
-plt.show()
+if '--savefig' in sys.argv:
+    fig.savefig(folder+add+'-ex.jpg', bbox_inches = 'tight', dpi = 300)
+    figexp.savefig(folder+add+'-exbbox.jpg', bbox_inches ='tight', dpi =300)
+else:
+    plt.show()
 
 
 
