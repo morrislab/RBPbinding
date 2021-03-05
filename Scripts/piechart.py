@@ -74,7 +74,7 @@ figlegend.savefig(outdir+'Kingdomlegend.jpg', dpi = 300, bbox_inches = 'tight')
 
 
 
-plt.show()
+#plt.show()
 
 
 
