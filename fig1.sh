@@ -33,10 +33,10 @@ mpearson=${outdir}${zscores%.txt}'_pearson.mat'
 
 
 # piechart figure 1
-python Scripts/piechart.py ${indir}${masterfile} ${fig1}
+python Scripts/piechart.py ${masterfile} ${fig1}
 
 ### Figure 1A # Motif similarity matrix after sequence identity clustering
-python Scripts/make_newick_phylo.motifs.3.py $seqid single None 'Seq identity' 100.,50.,0. ${indir}${masterfile} ${outdir}${zscores%.txt}_pwm.hmot --savefig $fig1 150 --showsimilarity $mpearson --markset 291 --assignspecies --proteinlist ${indir}${highestzscoreset}
+python Scripts/make_newick_phylo.motifs.3.py $seqid single None 'Seq identity' 100.,50.,0. ${masterfile} ${outdir}${zscores%.txt}_pwm.hmot --savefig $fig1 150 --showsimilarity $mpearson --markset 291 --assignspecies --proteinlist ${indir}${highestzscoreset}
 
 ### Figure 1B # Motif similarity matrix after sequence identity clustering for a-rich cluster
 python Scripts/make_newick_phylo.motifs.3.py $seqid single None 'Seq identity' 100.,50.,0. $masterfile ${outdir}${zscores%.txt}_pwm.hmot --savefig $fig1 150 --showsimilarity $mpearson --markset 291 --assignspecies --proteinlist ${indir}pearsonlist-arich.txt
