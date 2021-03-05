@@ -7,7 +7,7 @@ Dependencies:
 
 python 2.7 (mostly), python 3 (only once)
 
-scikit-learn, numpy, scipy, matplotlib, statsmodels, seaborn, biopython, etc.
+scikit-learn, numpy, scipy, matplotlib, statsmodels 0.10.0, seaborn, biopython, logomaker etc.
 
 To execute "full" pipeline (i.e. every intermediate step, very long running time required, parallel execution recommended), 
 also download and install:
