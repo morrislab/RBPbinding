@@ -3,6 +3,8 @@ This directory contains the code for "Reconstructing sequence specificities of R
 
 We developed a linear embedding model to understand the relationship between protein sequence patterns and RNA sequence specificity. 
 
+Recommended: create virtual python 2.7 environment and install following dependencies in $requirements.txt
+
 Dependencies:
 
 python 2.7 (mostly), python 3 (only once)
