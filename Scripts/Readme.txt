@@ -16,4 +16,8 @@ scanFastaWithPWMregions.py : Scan 3'UTR sequences with binding PSSMs
 
 Specificity_predictors.py : Predict RNA sequence specficity with various methods (JPLE, LR, KNN, Affinity regression)
 
+- run with (see also performance.sh): 
+$python Specificity_predictors.py $protein-profiles.npz $zscores.txt --trainingset --normY2
+
+
 top_identity_to_trainset.py : Predict RNA sequence specificity from most similar protein sequence
