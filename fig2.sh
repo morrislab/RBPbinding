@@ -38,13 +38,12 @@ rfpredpdb=${Imask}'rf_complete_wz5sum-Nonexnorm-testinterfaceRncmpt_templates-id
 # Figure 2B, grey UMAP embedding
 python Scripts/motifset_cluster_4.py --plotfeatures ${outdir}JPLE_RRMKHcomplete/jplesvd122_svdsignificant_response122.0_maplsq_decglobal_-testset_Platent.npz 1 umap 2 --reduceparams 14,cosine,0.7,1.,42 --plotevo --figuresettings 6 6 0.3 100 False 0 0 0 --savefig ${fig2}JPLElatent_umap.jpg
 # Figure 2C, Pearson recall curve for sequence identity and JPLE
-python Scripts/precision_recall_predictions.py 2 --scores -${outdir}Performance/JPLE/jplesvd122_set_complete__svdsignificant_response122.0_maplsq_declocal_-testset_latentstats.dat,-1 ${outdir}Performance/SeqID/RNCMPT_unique_experiments_RRM,KH_testsetSingle_Rncmpt.aaseq.ext15_combined_lnormalignment_alignlocal_id_bid.dat,-1 --realval ${outdir}Performance/JPLE/jplesvd122_set_complete__svdsignificant_response122.0_maplsq_declocal_-testset_profile_pcorrelation.dat,-2 ${outdir}Performance/SeqID/RNCMPT_unique_experiments_RRM,KH_testsetSingle_Rncmpt.aaseq.ext15_combined_lnormalignment_alignlocal_id_bid-Zscores_420_origrncmpt_pearson.dat,-1 --setnames "JPLE confidence, SeqID" --legend --savefig ${fig2}Pearson_recall_jple-seqId.jpg --definecolors 1,0 --ycut 0.7
+python Scripts/precision_recall_predictions.py 2 --scores  ${outdir}Performance/SeqID/RNCMPT_unique_experiments_RRM,KH_testsetSingle_Rncmpt.aaseq.ext15_combined_lnormalignment_alignlocal_id_bid.dat,-1 -${outdir}Performance/JPLE/jplesvd122_set_complete__svdsignificant_response122.0_maplsq_declocal_-testset_latentstats.dat,-1 --realval ${outdir}Performance/SeqID/RNCMPT_unique_experiments_RRM,KH_testsetSingle_Rncmpt.aaseq.ext15_combined_lnormalignment_alignlocal_id_bid-Zscores_420_origrncmpt_pearson.dat,-1  ${outdir}Performance/JPLE/jplesvd122_set_complete__svdsignificant_response122.0_maplsq_declocal_-testset_profile_pcorrelation.dat,-2 --setnames "SeqID, JPLE confidence" --legend --savefig ${fig2}Pearson_recall_jple-seqId.jpg --definecolors 0,1 --ycut 0.7
 # Figure 2D, AUROC curve plot
 python Scripts/kmer_AUC.2.py ${Imask}Rncmpt_templates-id50.0-msim3.5_all.txt $jplepredpdb $conspredpdb JPLE,Conservation --boxroc --boxpr --diffscatter --combine --savefig ${fig2}AUC_pdb_jple_vs_conservation.jpg --saveresults
 # Figure 2D, structure plot
-echo 'Save pymol figure as png'
+echo 'Please save pymol figure as png in Figure/Figure2'
 pymol ${Imask}RNCMPT00121_to_4ed5_B_CRncmpt.aaseq.ext15_domain_fusedjplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal_-testset_PreconstructionZ-norm_kmer2sequence_split.pdb ${Imask}showpdb.pml B C
-
 
 ##### Supplementary Figures Figure2
 # Plot k-mer overlap between KH and RRM

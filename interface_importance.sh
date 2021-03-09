@@ -80,8 +80,8 @@ dertemplates=${Imask}'Rncmpt_templates-id50.0-msim3.5.txt'
 alltemplates=${Imask}'Rncmpt_templates-id50.0-msim3.5_all.txt'
 pdbrrmdomain='RRMpdb_Eval0.1-ext35_RRMpdb.rrm1-domain.fasta'
 pdbrrmconcat='RRMpdb_Eval0.1-ext35_RRMpdb.rrm1-concatenated.fasta'
-jpleint=${Outdir}'Rncmpt.aaseq.ext15_domain_fusedjplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal_-testset_PreconstructionZ-norm_kmer2sequence.fasta'
-jpleintsplit=${Outdir}'Rncmpt.aaseq.ext15_domain_fusedjplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal_-testset_PreconstructionZ-norm_kmer2sequence_split.fasta'
+jpleint=${outdir}'Rncmpt.aaseq.ext15_domain_fusedjplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal_-testset_PreconstructionZ-norm_kmer2sequence.fasta'
+jpleintsplit=${outdir}'Rncmpt.aaseq.ext15_domain_fusedjplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal_-testset_PreconstructionZ-norm_kmer2sequence_split.fasta'
 ## Visualize predictions with JPLE
 # We ran scratch to predict secondary structure profiles for measured RBPs in RNAcompete
 #~/SCRATCH-1D_1.2/bin/run_SCRATCH-1D_predictors.sh  Rncmpt.aaseq.ext15_domain.fasta Rncmpt.aaseq.ext15_domain.fasta.scratch 4
@@ -93,9 +93,12 @@ python Scripts/interface_secstruc_map.py ${Imask}${rncmptsecstruc} ${jpleintspli
 
 
 #Generate pdbs with jple score for RNAcompete measures with template
-python Scripts/colorpdb.py ${Imask}/4ed5_B_lt5-interface.pdb,B,C ${jpleintsplit},RNCMPT00121 0,1 .2 --normscore --meanlowscore --maskpdb
-python Scripts/colorpdb.py ${Imask}/4c4w_E_lt5-interface.pdb,E,H ${jpleintsplit},RNCMPT00071 0 .2 --normscore --meanlowscore --maskpdb
-python Scripts/colorpdb.py ${Imask}/2m8d_B_lt5-interface.pdb,B,A ${jpleintsplit},RNCMPT00163 1 .2 --normscore --meanlowscore --maskpdb
+python Scripts/colorpdb.py ${Imask}4ed5_B_lt5-interface.pdb,B,C ${jpleintsplit},RNCMPT00121 0,1 .2 --normscore --meanlowscore --maskpdb
+python Scripts/colorpdb.py ${Imask}4c4w_E_lt5-interface.pdb,E,H ${jpleintsplit},RNCMPT00071 0 .2 --normscore --meanlowscore --maskpdb
+python Scripts/colorpdb.py ${Imask}2m8d_B_lt5-interface.pdb,B,A ${jpleintsplit},RNCMPT00163 1 .2 --normscore --meanlowscore --maskpdb
+python Scripts/colorpdb.py ${Imask}2mgz_A_lt5-interface.pdb,A,C ${jpleintsplit},RNCMPT00180 0 .2 --normscore --meanlowscore --maskpdb
+python Scripts/colorpdb.py ${Imask}2mgz_B_lt5-interface.pdb,B,C ${jpleintsplit},RNCMPT00051 0 .2 --normscore --meanlowscore --maskpdb
+python Scripts/colorpdb.py ${Imask}2km8_C_lt5-interface.pdb,C,A ${jpleintsplit},RNCMPT00031 0,1 .2 --normscore --meanlowscore --maskpdb
 # Show pdb in pymol with coloring by JPLE scorei
 #pymol RNCMPT00121_to_4ed5_B_CRncmpt.aaseq.ext15_domain_fusedjplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal_-testset_PreconstructionZ-norm_kmer2sequence_split.pdb ${Imask}showpdb.pml
 # showpdb.pml colors interface accordingly, not fully automated
