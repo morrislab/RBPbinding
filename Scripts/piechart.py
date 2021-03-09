@@ -69,6 +69,8 @@ for r, rdt in enumerate(recognizedtypes):
     axf.set_xlim([-0.01,0.06])
     axf.set_ylim([-0.5, 0.1])
 
+
+
 figlegend.savefig(outdir+'Kingdomlegend.jpg', dpi = 300, bbox_inches = 'tight')
 
 

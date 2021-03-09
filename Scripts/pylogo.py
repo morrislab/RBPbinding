@@ -73,12 +73,16 @@ for p, pname in enumerate(pnames):
     
     dpi = 300
     
-    print 'Saved as', outname+'_'+pname+'.jpg'
-    if '--transparent' in sys.argv:
-        fig.savefig(outname+'_'+pname+'.jpg', format = 'jpg', dpi = dpi, bbox_inches = 'tight', transparent = True)
+    if '--format' in sys.argv:
+        formt = '.'+sys.argv[sys.argv.index('--format')+1]
     else:
-        fig.savefig(outname+'_'+pname+'.jpg', format = 'jpg', dpi = dpi, bbox_inches = 'tight')
-    #fig.savefig(outname+'_eigvec'+str(p)+'.jpg', format = 'jpg', dpi = 100)
+        formt = '.jpg'
+    
+    print 'Saved as', outname+'_'+pname+formt
+    if '--transparent' in sys.argv:
+        fig.savefig(outname+'_'+pname+formt, dpi = dpi, bbox_inches = 'tight', transparent = True)
+    else:
+        fig.savefig(outname+'_'+pname+formt, dpi = dpi, bbox_inches = 'tight')
     plt.close()
     
     

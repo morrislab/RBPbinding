@@ -220,7 +220,7 @@ if '--print_stats' not in sys.argv:
 
     xlabels[0] = list(xlabels[0])
     
-    fig = plt.figure(figsize = (6,6), dpi= 100) #figsize=(5,5), dpi = 100)
+    fig = plt.figure(figsize = (4.5,4.5), dpi= 100) #figsize=(5,5), dpi = 100)
     ax = fig.add_subplot(111)
     for n in range(numsets):
         xax = np.linspace(0.,1.,len(precision[n]))
@@ -308,7 +308,7 @@ if '--ycut' in sys.argv:
 
 
 if '--print_stats' not in sys.argv:
-    fig2 = plt.figure(figsize = (6,6), dpi = 100)
+    fig2 = plt.figure(figsize = (4.5,4.5), dpi = 100)
     ax3 = fig2.add_subplot(111)
     for n in range(numsets):
         xax = np.linspace(0.,1.,len(avprec[n][0]))
@@ -363,7 +363,7 @@ if '--print_stats' not in sys.argv:
 
 
 
-    fig3 = plt.figure(figsize = (6,6), dpi = 100)
+    fig3 = plt.figure(figsize = (4.5,4.5), dpi = 100)
     ax5 = fig3.add_subplot(111)
     fig3.subplots_adjust(top=0.85)
     
@@ -430,7 +430,7 @@ if '--print_stats' not in sys.argv:
     ax7.spines['right'].set_visible(False)
     #ax7.spines['left'].set_visible(False)
     ax7.set_xlim(ax5.get_xlim())
-    ax7.spines["top"].set_position(("axes", 1.2))
+    ax7.spines["top"].set_position(("axes", 1.25))
     ax7.set_xticks(xticks[1])
     ax7.tick_params(color = colors[1], width = 2.)
     ax7.spines['top'].set_color(colors[1])

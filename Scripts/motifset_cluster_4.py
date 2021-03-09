@@ -386,8 +386,8 @@ def motcolor(motiflist, motctype):
                 
         if motctype == 'manual':
             #print np.argsort(np.argsort(colormat))
-            tab40 = np.concatenate([cm.tab20b(np.arange(12,15, dtype = int)),cm.tab20b(np.arange(16,19, dtype = int)), cm.tab20b(np.arange(3, dtype = int)),cm.tab20c(np.arange(12,15, dtype = int)), cm.tab20b(np.arange(4,7, dtype = int)), cm.tab20c(np.arange(8,11, dtype = int)), cm.tab20b(np.arange(8,11, dtype = int)),cm.tab20c(np.arange(4,7, dtype = int)), cm.tab20c(np.arange(0,3, dtype = int)), cm.tab20(np.arange(16,20, dtype = int)) ], axis = 0)
-            colormat = tab40[np.argsort(np.argsort(np.array(colormat)[:,2]+np.array(colormat)[:,0]))]
+            tab40 = np.concatenate([cm.tab20b([0,2]),cm.tab20c(np.arange(0,2, dtype = int)), cm.tab20([18]), cm.tab20c(np.arange(8,10, dtype = int)),cm.tab20b(np.arange(4,6, dtype = int)),cm.tab20([16]), cm.tab20b(np.arange(8,11, dtype = int)),cm.tab20([6,10]),cm.tab20c([4,5]),cm.Dark2([3]),cm.tab20b(np.arange(16,19, dtype = int)), cm.gist_rainbow(np.linspace(0,1,10))], axis = 0)
+            colormat = tab40[np.argsort(np.argsort(np.array(colormat)[:,3]+np.array(colormat)[:,1]))]
             
     colormat = np.array(colormat)
     return colormat
@@ -1077,7 +1077,7 @@ if __name__ == '__main__':
             elif cmcolor == 'tab20b':
                 scattercolor = cm.tab20b(db)
     else:
-        scattercolor = cm.Greys(np.ones(len(rep2d)))
+        scattercolor = cm.Greys(np.ones(len(rep2d))*0.6)
     
     
     annotatemot = None

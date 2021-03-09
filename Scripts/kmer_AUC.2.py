@@ -687,7 +687,7 @@ if __name__ == '__main__':
 
 
     if '--diffscatter' in sys.argv:
-        fig5 = plt.figure(figsize = (6.5,3.), dpi = 200)
+        fig5 = plt.figure(figsize = (9,4.), dpi = 200)
         ax5 = fig5.add_subplot(121)
         
         sort = np.argsort(np.absolute(np.array(rocstats)[:,4]))
@@ -716,7 +716,7 @@ if __name__ == '__main__':
         ax6.set_ylabel(scorenames[0])
         ax6.set_xlabel(scorenames[1])        
         
-        
+        plt.subplots_adjust(wspace=0.25)
         
         if savefig:
             fig5.savefig(outname+'_auc-scatter.jpg', dpi = 300, bbox_inches = 'tight')   # save the figure to file

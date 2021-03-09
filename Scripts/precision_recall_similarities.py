@@ -587,11 +587,11 @@ if '--supplot' not in sys.argv:
             sortclasses.append(clsort)
 
         bins = 41
-        colums = int(np.sqrt(numsets))+int((numsets%int(np.sqrt(numsets)))>0)
-        rows = int(numsets/colums)
+        rows = int(np.sqrt(numsets))+int((numsets%int(np.sqrt(numsets)))>0)
+        colums = int(numsets/rows)
         print colums, rows
         
-        fd = 6
+        fd = 3.5
         
         figd = plt.figure('Density', figsize = (fd*colums/rows, fd))
         figd2 = plt.figure('Densitynonorm', figsize = (fd*colums/rows, fd))
@@ -604,10 +604,10 @@ if '--supplot' not in sys.argv:
             axd2.spines['top'].set_visible(False)
             axd2.spines['left'].set_visible(False)
             axd2.spines['right'].set_visible(False)
-            axd.spines['bottom'].set_linewidth(2.)
-            axd2.spines['bottom'].set_linewidth(2.)
-            axd.tick_params(left = False, labelleft = False, width = 2.)
-            axd2.tick_params(left = False, labelleft = False, width = 2.)
+            #axd.spines['bottom'].set_linewidth(2.)
+            #axd2.spines['bottom'].set_linewidth(2.)
+            axd.tick_params(left = False, labelleft = False)#, width = 2.)
+            axd2.tick_params(left = False, labelleft = False)#, width = 2.)
             als = [0.4,0.6, 0.7]
             linecol = ['grey', 'dimgrey', 'k'] #, colors[n]]
             iis = [0, -1, 1]
@@ -636,13 +636,13 @@ if '--supplot' not in sys.argv:
             ax2av.spines['top'].set_visible(False)
             ax2av.spines['right'].set_visible(False)
             
-            axav.spines['bottom'].set_linewidth(2.)
-            ax2av.spines['bottom'].set_linewidth(2.)
-            axav.spines['left'].set_linewidth(2.)
-            ax2av.spines['left'].set_linewidth(2.)
+            #axav.spines['bottom'].set_linewidth(2.)
+            #ax2av.spines['bottom'].set_linewidth(2.)
+            #axav.spines['left'].set_linewidth(2.)
+            #ax2av.spines['left'].set_linewidth(2.)
             
-            axav.tick_params(width = 2.)
-            ax2av.tick_params(width = 2.)
+            #axav.tick_params(width = 2.)
+            #ax2av.tick_params(width = 2.)
             axav.set_ylim([0.,1.02])
             ax2av.set_ylim([0.,1.02])
             
@@ -652,9 +652,9 @@ if '--supplot' not in sys.argv:
             axdav.spines['top'].set_visible(False)
             axdav.spines['right'].set_visible(False)
             
-            axdav.spines['bottom'].set_linewidth(2.)
-            axdav.spines['left'].set_linewidth(2.)
-            axdav.tick_params(width = 2., labelleft = True, labelright = False, right = False, left = True)
+            #axdav.spines['bottom'].set_linewidth(2.)
+            #axdav.spines['left'].set_linewidth(2.)
+            axdav.tick_params(labelleft = True, labelright = False, right = False, left = True)
             axdav.set_ylim([0.,1.04])
             
             

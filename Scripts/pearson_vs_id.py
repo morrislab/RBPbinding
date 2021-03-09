@@ -49,7 +49,7 @@ for n in range(numsets):
 
 x = np.array(x)
 y = np.array(y)
-
+pairname = np.array(pairname)
 
 
 
@@ -68,7 +68,9 @@ if '--selfcorr' in sys.argv:
     add +='-selfAB'
     scorrfile = sys.argv[sys.argv.index('--selfcorr')+1]
     scrow = int(sys.argv[sys.argv.index('--selfcorr')+2])
-    selfcorrs = np.genfromtxt(scorrfile)[:, scrow]
+    uniquep = np.unique(np.concatenate(pairname))
+    selfcorrs = np.genfromtxt(scorrfile, dtype = str)
+    selfcorrs = selfcorrs[np.isin(selfcorrs[:,0], uniquep), scrow].astype(float)
     axself = fig.add_subplot(122)
     axself.set_position([0.875, 0.2, 0.075, 0.7])
     
@@ -123,7 +125,8 @@ if '--selfcorr' in sys.argv:
 fig.savefig(outname+os.path.splitext(os.path.split(sys.argv[3])[1])[0]+'-vs-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+add+'.jpg', bbox_inches = 'tight', transparent=True, dpi = 300)
 print outname+os.path.splitext(os.path.split(sys.argv[3])[1])[0]+'-vs-'+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+add+'.jpg'
 #fig.tight_layout()
-plt.show()
+if '--show' in sys.argv:
+    plt.show()
 
 
 
