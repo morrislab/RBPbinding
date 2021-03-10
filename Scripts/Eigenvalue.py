@@ -278,7 +278,8 @@ fig.savefig(outname+'EigenvectorPR_variance_explanation.jpg', dpi = 300, bbox_in
 fig2.savefig(outname+'Eigenvector_variance_composition.jpg', dpi = 300, bbox_inches = 'tight')
 fig3.savefig(outname+'Eigenvector_variance_composition_sum.jpg', dpi = 300, bbox_inches = 'tight')
 
-plt.show()
+if '--show' in sys.argv:
+    plt.show()
 
 
 

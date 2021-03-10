@@ -64,6 +64,8 @@ fig = plt.figure(figsize = (4,4))
 ax = fig.add_subplot(111)
 venn2([set(groupkmer[0]), set(groupkmer[1])], set_labels = groups, set_colors = ['royalblue', 'olive'], ax = ax)
 fig.savefig(outdir+os.path.splitext(os.path.split(sys.argv[2])[1])[0]+'-'.join(np.array(groups))+'_vennkmer.jpg', bbox_inches = 'tight', dpi = 300)
-plt.show()
+
+if '--show' in sys.argv:
+    plt.show()
 
 

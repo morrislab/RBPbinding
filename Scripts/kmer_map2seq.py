@@ -9,7 +9,6 @@ from Bio import pairwise2
 import operator
 from joblib import Parallel, delayed
 import multiprocessing
-from numba import jit
 import matplotlib.pyplot as plt
 
 def map2seq(kweights, pkmer, pseq, ly):

@@ -326,8 +326,6 @@ def removeseqs(idmat, maxsim, minhom):
     outkeep = np.setdiff1d(keep, rm)
     return outkeep
 
-from numba import jit
-#@jit(nopython=True, parallel=True)            
 def removeseqsgetid(seqtest, maxsim, minhom):
     lennorm = float(len(seqtest[0]))
     outkeep = np.arange(len(seqtest))
