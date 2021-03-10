@@ -56,9 +56,9 @@ python Scripts/reconstruction_trainingsets.py ${indir}${rrmkhlist} ${outdir}Zsco
 compdir=${outdir}'JPLE_RRMKHcomplete'
 mkdir $compdir
 # Supervised version
-#python Scripts/Specificity_predictors.py ${indir}${zscores} ${outdir}Rncmpt.aaseq.ext15_domain_fused_5mer_features.npz --proteinset ${indir}${rrmkhlist} --JPLE svd 122 significant_response lsq global --savetestcorrelation --savetopintersection --savetestprofileslight --savelatentstats --savemodel --savetestprofiles --savelatenttest --save_reconstructionP --normP2 --normY2 --outname ${compdir}jplesvd122
+python Scripts/Specificity_predictors.py ${indir}${zscores} ${outdir}Rncmpt.aaseq.ext15_domain_fused_5mer_features.npz --proteinset ${indir}${rrmkhlist} --JPLE svd 122 significant_response lsq global --savetestcorrelation --savetopintersection --savetestprofileslight --savelatentstats --savemodel --savetestprofiles --savelatenttest --save_reconstructionP --normP2 --normY2 --outname ${compdir}jplesvd122
 # Semi-supervised version
-#python Scripts/Specificity_predictors.py ${indir}${zscores} ${outdir}Rncmpt.aaseq.ext15_domain_fused_5pm1hom99-50_5mer_features.npz --proteinset ${indir}${rrmkhlist} --JPLE svd 0.95 significant_response lsq global --savetestcorrelation --savetopintersection --savetestprofileslight --savelatentstats --savemodel --savetestprofiles --savelatenttest --save_reconstructionP --normP2 --normY2 --outname ${compdir}jplesvd0.95hom
+python Scripts/Specificity_predictors.py ${indir}${zscores} ${outdir}Rncmpt.aaseq.ext15_domain_fused_5pm1hom99-50_5mer_features.npz --proteinset ${indir}${rrmkhlist} --JPLE svd 0.95 significant_response lsq global --savetestcorrelation --savetopintersection --savetestprofileslight --savelatentstats --savemodel --savetestprofiles --savelatenttest --save_reconstructionP --normP2 --normY2 --outname ${compdir}jplesvd0.95hom
 
 if [ $full = 1 ]; then
 ## Comparison of performance of predictors
