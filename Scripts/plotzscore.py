@@ -26,10 +26,12 @@ col = colors[color]
 
 fig = plt.figure(figsize = (4.5,4.5), dpi= 200)
 ax = fig.add_subplot(111)
-ax.plot([-np.amax(np.absolute(x))-.6, np.amax(np.absolute(x))+.6], [0,0], ls = '--', c = 'grey', alpha = 0.5)
-ax.plot([0,0], [-np.amax(np.absolute(y))*1.05, 1.05*np.amax(np.absolute(y))],  ls = '--', c = 'grey', alpha = 0.5)
-ax.set_xlim([-np.amax(np.absolute(x))*1.05, np.amax(np.absolute(x))*1.05])
-ax.set_ylim([-np.amax(np.absolute(y))*1.05, np.amax(np.absolute(y))*1.05])
+
+stretch = 1.3
+ax.plot([-np.amax(np.absolute(x))*stretch, np.amax(np.absolute(x))*stretch], [0,0], ls = '--', c = 'grey', alpha = 0.5)
+ax.plot([0,0], [-np.amax(np.absolute(y))*stretch, stretch*np.amax(np.absolute(y))],  ls = '--', c = 'grey', alpha = 0.5)
+ax.set_xlim([-np.amax(np.absolute(x))*stretch, np.amax(np.absolute(x))*stretch])
+ax.set_ylim([-np.amax(np.absolute(y))*stretch, np.amax(np.absolute(y))*stretch])
 
 ax.scatter(x, y, c = col, s = 100)
 ax.set_xlabel('Z-score correlation')

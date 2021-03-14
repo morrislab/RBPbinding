@@ -124,7 +124,7 @@ for n in range(numsets):
     print ' '.join(scores[n][sortvalues[:20]].astype(str))
     print ' '.join(realsim[n][sortvalues[:20]].astype(str))
     # addjust scale of scores shown in the figure
-    scale = np.mean(np.diff(scores[n][sortvalues]))
+    scale = np.mean(np.absolute(np.diff(scores[n][sortvalues])))
     if np.absolute(np.log10(scale)) > 3:
         factor10 = 10.**round(scale)
     else:

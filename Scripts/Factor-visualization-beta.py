@@ -586,6 +586,44 @@ def readin(proteinfeatures, profiles, proteinset = 'none'):
 
 if __name__ == '__main__':
     
+    fac = np.load(sys.argv[1], allow_pickle = True)
+    zfeatures = fac['Zfeatures']
+    pfeatures = fac['sequencefeatures']
+    datnames = fac['trainprots']
+    coef_ = fac['coef_']
+    u = coef_[0]
+    s = coef_[1]
+    v = coef_[2]
+    
+    scalingfactorr = float(sys.argv[2])
+    scalingfactorp = float(sys.argv[3])
+
+    vr = v[:, -len(zfeatures):]
+    vp = v[:, :len(pfeatures)]
+   
+    srnorm = np.sum(s**2 *np.sum(vr**2,axis =1))/scalingfactorr
+    spnorm = np.sum(s**2 *np.sum(vp**2,axis =1))/scalingfactorp
+
+    snorm = srnorm +spnorm
+    s2 = s**2/snorm
+
+    sr2 = s**2 *np.sum(vr**2,axis =1)/srnorm
+    sp2 = s**2 *np.sum(vp**2,axis =1)/spnorm
+
+    maxnum = int(sys.argv[4])
+    
+    vr, vp, v = vr[:maxnum], vp[:maxnum], v[:maxnum]
+    s2, sr2, sp2 = s2[:maxnum], sr2[:maxnum], sp2[:maxnum]
+    u, s = u[:maxnum], s[:maxnum]
+
+    if '--outdir' in sys.argv:
+        outdir = sys.argv[sys.argv.index('--outdir')+1]
+    else:
+        outdir = os.path.split(sys.argv[0])[0]
+    outname = outdir+'/'+os.path.splitext(os.path.split(sys.argv[0])[1])[0]
+
+
+    '''
     profiles = sys.argv[1]
     proteinfeatures = sys.argv[2]
     proteinset =  sys.argv[3]
@@ -625,7 +663,7 @@ if __name__ == '__main__':
     u,s,v = u[:,sortvec], s[sortvec], v[sortvec]
     s2, sr2, sp2 = s2[sortvec], sr2[sortvec], sp2[sortvec]
     vr, vp = vr[sortvec], vp[sortvec]
-
+    '''
 
     leny = len(zfeatures)
     lenp = len(pfeatures)

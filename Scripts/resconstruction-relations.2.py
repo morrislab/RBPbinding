@@ -29,9 +29,9 @@ def plotdistribution(x, y, xticks = None, xticklabels = None, yticks = None, yti
         mainwidth = right - left
         mainheight = top - bottom
     if plotdist:    
-        fig = plt.figure(figsize = (7,7))
+        fig = plt.figure(figsize = (5.25,5.25))
     else:
-        fig = plt.figure(figsize = (5,5))
+        fig = plt.figure(figsize = (4,4))
     ax = fig.add_subplot(221)
     ax.set_position([left,bottom,mainwidth,mainheight])
 
