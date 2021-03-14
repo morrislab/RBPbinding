@@ -57,9 +57,9 @@ python Scripts/precision_recall_predictions.py 4 --scores ${outdir}Performance/S
 python Scripts/scatter_predictions.py --files ${outdir}Performance/DeepL/lrunirep_set_complete__LR0.0001fiTrue-testset_profile_pcorrelation.dat ${outdir}Performance/JPLE/jplesvd122_set_complete__svdsignificant_response122.0_maplsq_declocal_-testset_profile_pcorrelation.dat --definecolums -2 -2 --minlength 354 --setnames UnirepDLfeatures JPLE  --plotlim 0,1.025 --label 'Pearson' --savefig ${supfig}Scatter_Pearson_JPLE-unirep.jpg
 python Scripts/scatter_predictions.py --files ${outdir}Performance/DeepL/lrbertrep_set_complete__LR0.0001fiTrue-testset_profile_pcorrelation.dat ${outdir}Performance/JPLE/jplesvd122_set_complete__svdsignificant_response122.0_maplsq_declocal_-testset_profile_pcorrelation.dat --definecolums -2 -2 --minlength 354 --setnames UnirepDLfeatures JPLE  --plotlim 0,1.025 --label 'Pearson' --savefig ${supfig}Scatter_Pearson_JPLE-bert.jpg
 # Individual Area under the receiver operating curves against conservation, and interface visualizations
-python Scripts/kmer_AUC.2.py  ${Imask}Rncmpt_templates-id50.0-msim3.5_all.txt $jplepredpdb $conspredpdb JPLE,Conservation  --prplot --rocplots --interface_visualization 5. --combine --savefig ${supfig}AUC_pdb_jple_vs_conservation.jpg
+python Scripts/kmer_AUC.2.py  ${Imask}Rncmpt_templates-id50.0-msim3.5_all.txt $jplepredpdb $conspredpdb JPLE,Conservation  --prplots --rocplots --interface_visualization 5. --combine --savefig ${supfig}AUC_pdb_jple_vs_conservation.jpg
 # Scatter plot comparison to SVM trained on structures
-python Scripts/kmer_AUC.2.py ${Imask}Rncmpt_templates-id50.0-msim3.5_all.txt $jplepredpdb $rfpredpdb JPLE,Conservation --boxroc --boxpr --diffscatter --combine --savefig ${supfig}AUC_pdb_jple_vs_rf.jpg
+python Scripts/kmer_AUC.2.py ${Imask}Rncmpt_templates-id50.0-msim3.5_all.txt $jplepredpdb $rfpredpdb "JPLE,Random Forest(PSSM,Phy-Chem,[5])" --boxroc --boxpr --diffscatter --combine --savefig ${supfig}AUC_pdb_jple_vs_rf.jpg
 
 
 

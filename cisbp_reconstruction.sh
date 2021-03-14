@@ -33,10 +33,9 @@ full=0
 
 #### Generate files for CisBP #### 
 # Run interface reconstructions
-list=$(ls -d $reconst)
+list=$(ls -d ${reconst}*)
 # Alternatively, only create content for list of spcies
 #list=("Outdir/Reconstruction/Arabidopsis_thaliana/")
-
 if [ full = 1 ];then
 for l in $list; do echo $l; python Scripts/Specificity_predictors.py none none --JPLE svd 122 significant_response lsq global --save_reconstructionPtoP --normY2 --normP2 --recompute ${outdir}JPLE_RRMKHcomplete/jplesvd0.95hom_svdsignificant_response0.95_maplsq_decglobal__coef.npz ${l}"$(echo $l | cut -d'/' -f 3 )"_RRMKH_domain_fused_5mer_features.npz global none ${l}Reconstruction ; done
 

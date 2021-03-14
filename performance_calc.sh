@@ -53,7 +53,7 @@ python Scripts/reconstruction_trainingsets.py ${indir}${rrmkhlist} None None Non
 python Scripts/reconstruction_trainingsets.py ${indir}${rrmkhlist} ${outdir}Zscores_420_origrncmpt_pearson.mat 0.6 None None False Single
 
 # Run JPLE on full data set for UMAP visualization and RBR interface predictions
-compdir=${outdir}'JPLE_RRMKHcomplete'
+compdir=${outdir}'JPLE_RRMKHcomplete/'
 mkdir $compdir
 # Supervised version
 python Scripts/Specificity_predictors.py ${indir}${zscores} ${outdir}Rncmpt.aaseq.ext15_domain_fused_5mer_features.npz --proteinset ${indir}${rrmkhlist} --JPLE svd 122 significant_response lsq global --savetestcorrelation --savetopintersection --savetestprofileslight --savelatentstats --savemodel --savetestprofiles --savelatenttest --save_reconstructionP --normP2 --normY2 --outname ${compdir}jplesvd122

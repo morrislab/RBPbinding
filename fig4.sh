@@ -49,7 +49,7 @@ python Scripts/coverage-3.py  $cisbprecstats --specieslist ${recdir}species_hand
 # Fig 4D
 python Scripts/plotzscore.py $atsig 1,2,-1 ${stability}Arabidopsis_thaliana_proteinnames.txt --savefig --outdir ${fig4}
 python Scripts/plotzscore.py $atsig 1,2,-1 ${stability}Arabidopsis_thaliana_proteinnames.txt --savefig --legend --outdir $supfig
-python Scripts/pylogo.py $atpwm --infocont --removeaxis --transparent
+python Scripts/pylogo.py $atpwm --infocont --removeaxis --transparent --format png
 # Fig 4E
 python Scripts/rbp-expression.py ${stability}RBPs_Exon_expression_rate.npz ${stability}Degradation_rate.npz $atsig 1,-1 $atnames ${atpwm} ${stability}SraRunTable.txt --clustertissue ${stability}Tissues_custers.named.txt  --fullsimilarity --outdir ${fig4} --savefig
 # Fig 4F

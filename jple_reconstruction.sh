@@ -47,8 +47,8 @@ combinedfasta='_RRMKH_domain_combined.fasta'
 fusedfasta='_RRMKH_domain_fused.fasta'
 
 perform=${outdir}Performance/
-mkdir ${perform}JPLEunknown
-mkdir ${perform}LRunknown
+#mkdir ${perform}JPLEunknown
+#mkdir ${perform}LRunknown
 
 full=0
 
