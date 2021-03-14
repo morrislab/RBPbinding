@@ -3,27 +3,24 @@ This directory contains the code for "Reconstructing sequence specificities of R
 
 We developed a linear embedding model to understand the relationship between protein sequence patterns and RNA sequence specificity. 
 
-Recommended: create virtual python 2.7 environment and install following dependencies in $requirements.txt
+Recommended: create virtual python 2.7 environment and install dependencies in dependencies.txt
 
-Dependencies:
+Additional requirements: 
 
-python 2.7 (mostly), python 3 (only once)
+- python3 (only agglomerative_clustering.py), scikit-learn==0.23.2)
+- Hmmer (http://hmmer.org/)
+- conservation_code (Capra JA and Singh M. Predicting functionally important residues from sequence conservation. Bioinformatics, 23(15):1875-82, 2007.
+(https://compbio.cs.princeton.edu/conservation/))
+- pymol (https://pymol.org/2/) to visualize individual pdbs
 
-scikit-learn, numpy, scipy, matplotlib, statsmodels 0.10.0, seaborn, biopython, logomaker etc.
+Note: 
+To execute "full" pipeline (i.e. every intermediate step), very long running times and storage is required. Parallel execution recommended!
+To run modify intermediate results, set $full=1 in bash scripts.
 
-To execute "full" pipeline (i.e. every intermediate step, very long running time required, parallel execution recommended), 
-also download and install:
+RUN:
+Before reconstructing the figures with (fig1-5.sh), execute data processing scripts (rncmpt_data.sh, performance_calc.sh, interface_importance.sh, jple_reconstruction.sh, cisbp-recstats.sh, arabidopsis.sh)
 
-Hmmer (http://hmmer.org/)
-
-Capra JA and Singh M. Predicting functionally important residues from sequence conservation. Bioinformatics, 23(15):1875-82, 2007.
-(https://compbio.cs.princeton.edu/conservation/)
-
-pymol (https://pymol.org/2/)
-
-Before reconstructing the figures with (fig1-5.sh), execute the data processing scripts (rncmpt_data.sh, performance_calc.sh, interface_importance.sh, jple_reconstruction.sh, cisbp-recstats.sh, arabidopsis.sh)
-
-The following order is recommended
+The following order is recommended/required:
 
 1. rncmpt_data.sh
 2. fig1.sh
@@ -37,7 +34,7 @@ The following order is recommended
 10. fig4.sh
 11. fig5.sh
 
-cisbp_reconstruction.sh executes scripts to generate the data available on http://cisbp-rna.ccbr.utoronto.ca/
+cisbp_reconstruction.sh executes scripts to locally generate data available on http://cisbp-rna.ccbr.utoronto.ca/, e.g. PWMs jpgs for confidentily reconstructed specificities. 
 
 
 
