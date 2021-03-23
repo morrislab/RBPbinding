@@ -60,13 +60,17 @@ python Scripts/make_extdomain_fasta.py ${indir}${masterfile} 0 ${outdir}Rncmpt.a
 # extract domain fastas with 15 AA flanking sequences
 python Scripts/make_extdomain_fasta.py ${indir}${masterfile} 15 ${outdir}Rncmpt.aaseq.ext15
 
+full=0
+if [ full = 1 ]; then
 # compute sequece identity on long protein sequence
 python Scripts/pairwise_alignment.2.py --mprocessing 4 --sequences ${outdir}Rncmpt.aaseq.ext15_combined.fasta --alignment local Blosum62 -11 -1 --savetxt --lengthnorm alignment --outname ${outdir}Rncmpt.aaseq.ext15_combined_lnormalignment_alignlocal_id
 # compute protein sequence identities on short sequence
 python Scripts/pairwise_alignment.2.py --mprocessing 4 --sequences ${outdir}Rncmpt.aaseq.ext15_combined.fasta --alignment local Blosum62 -11 -1 --savetxt --lengthnorm min --outname ${outdir}Rncmpt.aaseq.ext15_combined_lnormmin_alignlocal_id
 # compute sequence identities for highest domain
-python /Scripts/pairwise_alignment.2.py --mprocessing 4 --sequences ${outdir}Rncmpt.aaseq_domain.fasta --alignment local Blosum62 -11 -1 --savetxt --lengthnorm alignment --outname ${outdir}Rncmpt.aaseq_domain_lnormalignment_alignlocal_id
+python Scripts/pairwise_alignment.2.py --mprocessing 4 --sequences ${outdir}Rncmpt.aaseq_domain.fasta --alignment local Blosum62 -11 -1 --savetxt --lengthnorm alignment --outname ${outdir}Rncmpt.aaseq_domain_lnormalignment_alignlocal_id
 python Scripts/Fuse_domain_identity_from_multseq_aligment.py --domainidentities ${outdir}Rncmpt.aaseq_domain_lnormalignment_alignlocal_id.txt --ident_option highdom
+fi 
+
 
 # clustering by protein sequence
 # long sequence norm
