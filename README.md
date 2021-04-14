@@ -1,7 +1,10 @@
 # RBP sequence specificity
+
+(Current version does not contain RNA sequence specificities. Experimental data will be provided upon submission. Consequently, only scripts that work without RNA binding specificities can be executed)
+
 This directory contains the code for "Reconstructing sequence specificities of RNA binding proteins across eukaryotes".
 
-We developed a linear embedding model to understand the relationship between protein sequence patterns and RNA sequence specificity. 
+We used a joint linear embedding approach to model the relationship between protein sequence and RNA sequence specificity. 
 
 Recommended: create virtual python 2.7 environment and install dependencies in dependencies.txt
 
@@ -14,8 +17,9 @@ Additional requirements:
 - pymol (https://pymol.org/2/) to visualize individual pdbs
 
 Note: 
-To execute "full" pipeline (i.e. every intermediate step), very long running times and storage is required. Parallel execution recommended!
-To run modify intermediate results, set $full=1 in bash scripts.
+To execute "full" pipeline (i.e. every intermediate step), very long running times and large amounts of memory are required. Parallel execution recommended!
+
+To run every step, and modify intermediate results, set $full=1 in individual bash scripts.
 
 RUN:
 Before reconstructing the figures with (fig1-5.sh), execute data processing scripts (rncmpt_data.sh, performance_calc.sh, interface_importance.sh, jple_reconstruction.sh, cisbp-recstats.sh, arabidopsis.sh)
