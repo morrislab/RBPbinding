@@ -173,11 +173,11 @@ def alignpwms(x, y):
     if lenx > leny:
         a = x
         b = y
+        offdir = 1
     else:
         a = y
         b = x
-    #print a
-    #print b
+        offdir = -1
     klset = []
     offset = []
     for i in range(len(a)-len(b)+1):
@@ -197,7 +197,7 @@ def alignpwms(x, y):
         klset.append(kldiv(pcheck1, pcheck3))
         offset.append(len(a)-i)
     bl = np.argmin(klset)
-    bestoff = offset[bl]
+    bestoff = offset[bl]*offdir
     bestkl = klset[bl]
     mpwm = meanpwm(a, b, bestoff)
     return bestkl, mpwm
@@ -883,9 +883,14 @@ if __name__ == '__main__':
         ax0.spines['left'].set_visible(False)
         ax0.spines['right'].set_visible(False)
         ax0.set_xlabel(clustername)
+        
+        if '--draw_line' in sys.argv:
+            valueline = float(sys.argv[sys.argv.index('--draw_line')+1])
+            linetick = 1.-valueline/idmatmax
+            dendolim = ax0.get_ylim()
+            ax0.plot([linetick, linetick], dendolim , c = 'firebrick', linewidth= 2.5, ls = '--')
         ax0.set_xticks(clusterticks)
         ax0.set_xticklabels(clusterticklabels)
-        
         
         ax.tick_params(left = False, bottom = False)
         ax.spines['top'].set_visible(False)
@@ -1033,7 +1038,7 @@ if __name__ == '__main__':
         #ac.set_title('Top 100 overlap')
         ac.set_title('Pearson R')
         coname = 'Pearson_colorbar.jpg' #'Top100_colorbar.jpg'
-        colorbar.savefig(outname+coname, dpi = 300,bbox_inches = 'tight')
+        colorbar.savefig(coname, dpi = 300,bbox_inches = 'tight')
         print 'colorbar saved'
         
         
