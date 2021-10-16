@@ -6,7 +6,7 @@ This directory contains the code for "Reconstructing sequence specificities of R
 
 We used a joint linear embedding approach to model the relationship between protein sequence and RNA sequence specificity. 
 
-Recommended: create virtual python 2.7 environment and install dependencies in dependencies.txt
+Recommended: install anaconda and create virtual environment with python 2.7 adding dependencies listed in dependencies.txt
 
 Additional requirements: 
 
