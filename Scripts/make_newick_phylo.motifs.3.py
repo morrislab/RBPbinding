@@ -8,8 +8,9 @@ from functools import reduce
 import logomaker as lm
 import pandas as pd
 from Bio import pairwise2
-from Bio.SubsMat import MatrixInfo as matlist
-matrix = matlist.blosum62
+#Bio.Align.PairwiseAligner
+from Bio.Align import substitution_matrices # MatrixInfo as matlist
+matrix = substitution_matrices.load("BLOSUM62") # matlist.blosum62
 from scipy.stats import pearsonr
 from matplotlib.colors import ListedColormap
 from matplotlib import cm
@@ -173,11 +174,11 @@ def alignpwms(x, y):
     if lenx > leny:
         a = x
         b = y
-        offdir = 1
     else:
         a = y
         b = x
-        offdir = -1
+    #print a
+    #print b
     klset = []
     offset = []
     for i in range(len(a)-len(b)+1):
@@ -197,7 +198,7 @@ def alignpwms(x, y):
         klset.append(kldiv(pcheck1, pcheck3))
         offset.append(len(a)-i)
     bl = np.argmin(klset)
-    bestoff = offset[bl]*offdir
+    bestoff = offset[bl]
     bestkl = klset[bl]
     mpwm = meanpwm(a, b, bestoff)
     return bestkl, mpwm
@@ -382,16 +383,16 @@ def is_number(s):
 # aligns protein sequence, calculates identities of different regions (domain, linker) and returns an array that represents domains and identity which can be plotted
 def align(s1, s2, l1, l2):
     # check l1 and l2 entries for redundant start and end points
-    print l1
+    #print l1
     for l in l1:
         if len(np.where(l1 == l)[0])>1:
             l1[np.where(l1 ==l)[0][-1]] += 1
-    print l1
-    print l2
+    #print l1
+    #print l2
     for l in l2:
         if len(np.where(l2 == l)[0])>1:
             l2[l2 ==l][-1] += 1
-    print l2
+    #print l2
         
     alignment = pairwise2.align.localds(s1, s2, matrix, -11, -1)[0]
     lseq1 = len(s1)-1
@@ -615,7 +616,7 @@ if __name__ == '__main__':
     # provide protein information
     masterfile = open(sys.argv[6], 'r').readlines()
     masterheader = masterfile[0].strip().split('\t')
-    masterinfo = []
+    masterinfo = [[] for h in range(len(masterheader))]
     for l, line in enumerate(masterfile):
         if l > 0:
             line = line.strip().split('\t')
@@ -635,10 +636,11 @@ if __name__ == '__main__':
                         entry = [entry]
                     nline.append(entry)
                 nline[1] = rnc
-                for s in range(7):
-                    nline[-s-1] = nline[-s-1][r]
-                masterinfo.append(nline)
-    masterinfo = np.array(masterinfo)
+                #for s in range(7):
+                    #nline[-s-1] = nline[-s-1][r]
+                for mi,minfo in enumerate(masterinfo):
+                    masterinfo[mi].append(nline[mi])
+    #masterinfo = np.array(masterinfo)
     
     #provide PWMs sort to idnames
     motiffile = sys.argv[7]
@@ -720,8 +722,8 @@ if __name__ == '__main__':
     if '--showindividual' in sys.argv:
         profiles = sys.argv[sys.argv.index('--showindividual')+1]
         
-        seqname, fsequence = masterinfo[:, masterheader.index('Motif_ID')], masterinfo[:, masterheader.index('Construct_AA_seq')]
-        infname, domainseq, domainname, domainlocation = masterinfo[:, masterheader.index('Motif_ID')], masterinfo[:, masterheader.index('RBD_or_RBR_AA_Seq')], masterinfo[:, masterheader.index('Domains')], masterinfo[:, masterheader.index('Domain_Boundaries')]
+        seqname, fsequence = np.array(masterinfo[ masterheader.index('Motif_ID')]), np.array(masterinfo[ masterheader.index('Construct_AA_seq')])
+        infname, domainseq, domainname, domainlocation =np.array(masterinfo[masterheader.index('Motif_ID')]),np.array(masterinfo[masterheader.index('RBD_or_RBR_AA_Seq')]), np.array(masterinfo[masterheader.index('Domains')]), np.array(masterinfo[ masterheader.index('Domain_Boundaries')])
         
         zscores = np.genfromtxt(profiles, dtype = str)
         znames = open(profiles, 'r').readline().split()[1:]
@@ -757,7 +759,8 @@ if __name__ == '__main__':
         for i in range(len(mclustercomp)):
             phylonames.append('# '+str(i)+' ('+str(mclustlen[i])+')')
     else:
-        protnames = masterinfo[:, [1,3,4]]
+        protnames = np.array([masterinfo[1], masterinfo[3], masterinfo[4]]).T
+        
         if '--showindividual' in sys.argv:
             phylonames = clusterclean(idnames, protnames, indvnamecluster)
         else:
@@ -766,8 +769,8 @@ if __name__ == '__main__':
     # assign domaintype to protein or cluster
     dtype = []
     for i, idname in enumerate(idnames):
-        di = list(masterinfo[:,1]).index(idname)
-        dtype.append('-'.join(masterinfo[di,8]))
+        di = list(masterinfo[1]).index(idname)
+        dtype.append('-'.join(masterinfo[8][di]))
     dtype = np.array(dtype)
     
     unidtype, unidtypenum = np.unique(dtype, return_counts = True)
@@ -808,7 +811,7 @@ if __name__ == '__main__':
     if '--assignspecies' in sys.argv:
         Speciescolors = ListedColormap(['white', (.9,0.6,0.3,.9), (.4,0.1,0.4,.9), (.3,0.7,0.3,.9), (.6,0.2,0.2,.9),(.2,0.8,0.6,.9)])
         Acceptedspecies = ['Metazoa','Protist','Plant','Fungi','Alga']
-        specieslist = masterinfo[:, [1,5]]
+        specieslist = np.array([masterinfo[1],masterinfo[5]]).T
         specicladecolor = np.zeros((len(idnames),1))
         proteinspecies = []
         for i, idn in enumerate(idnames):
@@ -883,14 +886,9 @@ if __name__ == '__main__':
         ax0.spines['left'].set_visible(False)
         ax0.spines['right'].set_visible(False)
         ax0.set_xlabel(clustername)
-        
-        if '--draw_line' in sys.argv:
-            valueline = float(sys.argv[sys.argv.index('--draw_line')+1])
-            linetick = 1.-valueline/idmatmax
-            dendolim = ax0.get_ylim()
-            ax0.plot([linetick, linetick], dendolim , c = 'firebrick', linewidth= 2.5, ls = '--')
         ax0.set_xticks(clusterticks)
         ax0.set_xticklabels(clusterticklabels)
+        
         
         ax.tick_params(left = False, bottom = False)
         ax.spines['top'].set_visible(False)
@@ -953,8 +951,8 @@ if __name__ == '__main__':
         
         
         if '--savefig' in sys.argv:
-            print outname+'.jpg'
-            fig.savefig(outname+'.jpg', bbox_inches = 'tight', transparent=True, dpi = dpi)
+            print( outname+'.svg')
+            fig.savefig(outname+'.svg', bbox_inches = 'tight', transparent=True, dpi = dpi)
         else:
             plt.show()
         
@@ -1038,8 +1036,8 @@ if __name__ == '__main__':
         #ac.set_title('Top 100 overlap')
         ac.set_title('Pearson R')
         coname = 'Pearson_colorbar.jpg' #'Top100_colorbar.jpg'
-        colorbar.savefig(coname, dpi = 300,bbox_inches = 'tight')
-        print 'colorbar saved'
+        colorbar.savefig(outname+coname, dpi = 300,bbox_inches = 'tight')
+        print( 'colorbar saved')
         
         
         
@@ -1075,7 +1073,7 @@ if __name__ == '__main__':
         
         
         for s in sorting[::-1]:
-            print phylonames[s], idnames[s]
+            print( phylonames[s], idnames[s])
         
         pheight = (top-bottom)/float(len(mclustercomp))
         for t, s in enumerate(sorting):
@@ -1090,7 +1088,7 @@ if __name__ == '__main__':
         axd.spines['left'].set_visible(False)
         axd.spines['right'].set_visible(False)
         axd.tick_params(which = 'both', left = False, bottom = False, labelleft = False, labelbottom = False, labelright = False)
-        print domainmat[sorting]
+        print( domainmat[sorting])
         imd = axd.imshow(domainmat[sorting], origin = 'lower', cmap = dcolors, aspect = 'auto', vmin = 0, vmax = 1)
         axd.set_yticks( np.arange(len(domainmat)+1)-0.5, minor = True)
         axd.set_xticks( np.arange(len(domainmat[0])+1)-0.5, minor = True)
@@ -1128,8 +1126,8 @@ if __name__ == '__main__':
                 axs.set_yticklabels(np.array(phylonames)[sorting])
         
         if '--savefig' in sys.argv:
-            fig.savefig(outname+'.jpg', bbox_inches = 'tight', transparent=True, dpi = dpi)
-            print 'Saved as', outname+'.jpg'
+            fig.savefig(outname+'.svg', bbox_inches = 'tight', transparent=True, dpi = dpi)
+            print( 'Saved as', outname+'.svg')
         else:
             plt.show()
 
@@ -1152,11 +1150,11 @@ if __name__ == '__main__':
                     for q in range(p+1, lc+1):
                         qi = mclust[q]
                         pi = mclust[p]
-                        print phylonames[pi]
-                        print phylonames[qi]
+                        print( phylonames[pi])
+                        print( phylonames[qi])
                         if idmat[qi,pi] < clustercut:
                             figz = plt.figure(figsize = (6,6))
-                            print (1.-idmat[qi,pi])*idmatmax, '%'
+                            print( (1.-idmat[qi,pi])*idmatmax, '%')
                             az = figz.add_subplot(221)
                             az.set_position([left+singlew*(ps+space),bottom+singleh*ps,singlew*scat,singleh*scat])
                             topx = np.around(topz(zscores[pi], zscores[qi]),2)
@@ -1239,7 +1237,7 @@ if __name__ == '__main__':
                                 az.legend(prop={'size': 7})
                             
                             if '--savefig' in sys.argv:
-                                print 'Saved', outname+'-'+phylonames[pi].replace(' ', '').replace('(','_').replace(')','').replace('$', '').replace("\\", '')+'-'+phylonames[qi].replace(' ', '').replace('(','_').replace(')','').replace('$', '').replace("\\", '')+'-scatter_aligment'+anno+'.jpg'
+                                print( 'Saved', outname+'-'+phylonames[pi].replace(' ', '').replace('(','_').replace(')','').replace('$', '').replace("\\", '')+'-'+phylonames[qi].replace(' ', '').replace('(','_').replace(')','').replace('$', '').replace("\\", '')+'-scatter_aligment'+anno+'.jpg')
                                 figz.savefig(outname+'-'+phylonames[pi].replace(' ', '').replace('(','_').replace(')','').replace('$', '').replace("\\", '')+'-'+phylonames[qi].replace(' ', '').replace('(','_').replace(')','').replace('$', '').replace("\\", '')+'-scatter_aligment'+anno+'.jpg', bbox_inches = 'tight', transparent=True, dpi = dpi)
                             else:
                                 plt.show()
