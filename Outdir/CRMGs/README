@@ -1,1 +1,5 @@
 Analysis of Conserved RNA Motif Groups
+Two necessary files that contain the sequence identities between all RBPs of all 52 species could not be included on Github because of their size. 
+117MB species_handcraft_measured4_RRMKH_domains_concatenated_lnormalignmentid.npz
+100MB species_handcraft_measured4_RRMKH_domains_concatenated_lnormminid.npz
+To get access to these files, please email ALEXANDER . SASSE AT gmail . com
