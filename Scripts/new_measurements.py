@@ -170,17 +170,18 @@ ax.set_ylabel('Percentage Eukaryotic RBPs')
 ax.set_yticks(np.linspace(0,1,11))
 ax.set_yticklabels([0,10,20,30,40,50,60,70,80,90,100])
 ax.grid()
+xticks = np.array(xticks)
 if '--logx' in sys.argv:
     ax.set_xscale('symlog')
     xticks = np.append([0, 1,10,100,1000], xticks)
-    xticklabels = xticks.astype(str)
-    xticklabels[xticklabels == '0'] = 'Measured'
+xticklabels = xticks.astype(str)
+xticklabels[xticklabels == '0'] = 'Measured'
 ax.set_xticks(xticks)
 ax.set_xticklabels(xticklabels, rotation = 60)
 ax.set_ylim([0,1])
 
 if '--savefig' in sys.argv:
-    outname = 'Additional_measurements_cut'+add+'-'+'-'.join(np.array(confcutset).astype(str))+'.jpg'
+    outname = 'Additional_measurements_cut'+add+'-'+'-'.join(np.array(confcutset).astype(str))+'.svg'
     outname = outname.replace(' ', '-')
     print outname
     fig.savefig(outname, bbox_inches = 'tight', dpi = 300)

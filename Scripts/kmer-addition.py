@@ -115,7 +115,7 @@ for di, ditype in enumerate(difftypes):
     print(len(clusters))
     x = []
     y = []
-    for p in range(500):
+    for p in range(2000):
         order = np.random.permutation(len(clusters))
         orderk = clusterkmers[order]
         numkmer = np.sum(np.cumsum(orderk, axis = 0) > 0, axis = 1)
@@ -245,7 +245,7 @@ ax.grid()
 ax.legend(loc = 0, prop={'size':6})
 
 if '--savefig' in sys.argv:
-    fig.savefig('K-mer_coverage_seqmotclusters'+add+'-cut'+str(clthresh)+'.jpg', dpi = 300, bbox_inches = 'tight')
+    fig.savefig('K-mer_coverage_seqmotclusters'+add+'-cut'+str(clthresh)+'.svg', dpi = 300, bbox_inches = 'tight')
 
 plt.show()
 

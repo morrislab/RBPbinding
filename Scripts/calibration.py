@@ -7,6 +7,8 @@ import matplotlib.cm as cm
 import seaborn as sns
 from scipy.stats import iqr, pearsonr, kde
 import pandas as pd
+from matplotlib.colors import ListedColormap
+
 
 def devi(xval, devtype):
     if devtype == 'iqr':
@@ -26,29 +28,45 @@ def avi(xval, avtype):
 
 
 
-def meanfunc(x, y, steps, steptype, overlap, avtype, stdtype):
+def meanfunc(x, y, steps, steptype, overlap, avtype, stdtype, start_step = None, cummulative = False):
     if steptype == 'x':
         stepvals = np.copy(x)
     elif steptype == 'y':
         stepvals = np.copy(y)
     else:
         stepvals = np.argsort(np.argsort(x))
-    lim = [np.amin(stepvals), np.amax(stepvals)]
+    
+    if start_step is not None:
+        lim = [start_step, np.amax(stepvals)]
+    else:
+        lim = [np.amin(stepvals), np.amax(stepvals)]
+    if cummulative:
+        overlap = 1
     boundaries = np.linspace(lim[0], lim[1], steps + overlap)
+    
+    print boundaries
     xmean = []
     ymean = []
     xerr = []
     yerr = []
-    j = 0
+    j = steps-1
     for i in range(steps):
-        #print j
-        stepmask = (stepvals<boundaries[i+overlap]) & (stepvals>= boundaries[j])
+        if cummulative:
+            i = 0
+        stepmask = (stepvals<boundaries[steps-i+overlap-1]) & (stepvals>= boundaries[j])
+        steps-i-1
         if len(np.where(stepmask)[0]) > 1:
-            j = j+1
-            xmean.append(avi(x[stepmask], avtype))
+            if cummulative:
+                xmean.append(boundaries[j])
+            else:
+                xmean.append(avi(x[stepmask], avtype))
+            print boundaries[steps-i+overlap-1], boundaries[j]
+            j = j-1
+            
             xerr.append(devi(x[stepmask], stdtype))
             ymean.append(avi(y[stepmask], avtype))
             yerr.append(devi(y[stepmask], stdtype))
+    print xmean, ymean
     return xmean, ymean, np.array(xerr).T, np.array(yerr).T
 
 
@@ -194,7 +212,7 @@ def opennpz(nfile, dtype, row):
             tscore = np.append(objm['testtestpearson'], objm['testpearson'], axis = 1)
         elif row == 'dot':
             tscore = np.append(objm['testtestdot'], objm['testdot'], axis = 1)
-    elif dtype == 'training':
+    elif dtype == 'training' or dtype == 'train':
         trpn = objm['trainprots'].astype(str)
         if row == 'euc':
             tscore = objm['testeuc']
@@ -212,7 +230,7 @@ def opennpz(nfile, dtype, row):
             tscore = objm['Ypearsonpred']
         elif row == 'predsim':
             tscore = objm['Ysimpred']
-    elif dtype == 'test':
+    elif dtype == 'test' or dtype == 'testing':
         trpn = objm['testprots'].astype(str)
         if row == 'euc':
             tscore = objm['testtesteuc']
@@ -346,13 +364,32 @@ if __name__ == '__main__':
         identityfull = np.concatenate(identities)
         similarfull = np.concatenate(similarities)
         
+        if '--positivity_rate' in sys.argv:
+            pratecut = float(sys.argv[sys.argv.index('--positivity_rate')+1])
+            similarfull = np.array(similarfull > pratecut, dtype = float)
+            scorenamestart += '-posrate'
+            
+        
         # change to mean and std, before was median and iqr
         
-        xmean, ymean, xerr, yerr = meanfunc(scorefull, similarfull, 50, 'x', 1, 'mean', 'std')
+        if '--meansteps' in sys.argv:
+            msteps = int(sys.argv[sys.argv.index('--meansteps')+1])
+        else:
+            msteps = 12
+        
+        if '--startstep' in sys.argv:
+            ststeps = float(sys.argv[sys.argv.index('--startsteps')+1])
+        else:
+            ststeps = -1.2 
+        cummu = False
+        if '--cummulative' in sys.argv:
+            cummu = True
+         
+        xmean, ymean, xerr, yerr = meanfunc(scorefull, similarfull, msteps, 'x', 1, 'mean', 'std', start_step = ststeps, cummulative = cummu)
         xinter, yinter, yintererr, yinterpars = interpolate(xmean, ymean, yerr, 2, 5, None)
         #xinter, yinter, yintererr = interpolate(xmean, ymean, yerr, 1, None, [np.amin(ymean), np.amax(ymean)])
         
-        xmeanid, ymeanid, xerrid, yerrid = meanfunc(scorefull, identityfull, 50, 'x', 1, 'mean', 'std')
+        xmeanid, ymeanid, xerrid, yerrid = meanfunc(scorefull, identityfull, msteps, 'x', 1, 'mean', 'std', start_step = ststeps, cummulative = cummu)
         xinterid, yinterid, yintererrid, yinterparsid = interpolate(xmeanid, ymeanid, yerrid, 2, 5, None)
         
         if '--reconstruction_cut' in sys.argv:
@@ -366,11 +403,16 @@ if __name__ == '__main__':
             idline = [idcut, idcut]
             
         # plot seqid and similarity against cosine distance
-        fig = plt.figure(figsize = (4,4), dpi = 200)
+        fig = plt.figure(figsize = (5,4), dpi = 200)
         ax = fig.add_subplot(111)
-        ax.scatter(scorefull, similarfull,c='limegreen', alpha = 0.05)
+        if '--colorbyid' in sys.argv:
+            pcl = ax.scatter(scorefull, similarfull,c=identityfull, cmap = ListedColormap([(0.6,0.6,0.6,.3),(0.6,0.6,0.7,.4), (0.5,0.5,0.8,.5), (0.4,0.4,0.9,.6), (0.3,0.3,0.9,.7)]))
+            #ax.scatter(scorefull, similarfull,c=identityfull, cmap =cm.YlOrBr, alpha = 0.3)
+            fig.colorbar(pcl, orientation ='vertical', ax = ax)
+        else:
+            ax.scatter(scorefull, similarfull,c='limegreen', alpha = 0.15)
         ax.errorbar(xmean, ymean, yerr=[yerr[1], yerr[0]], xerr=[xerr[1], xerr[0]], fmt='o', c = 'black')
-        ax.fill_between(xinter, yinter-yintererr[1], yinter+yintererr[0], color = 'grey', alpha = 0.5, linewidth = 0.)
+        ax.fill_between(xinter, yinter-yintererr[1], yinter+yintererr[0], color = 'grey', alpha = 0.3, linewidth = 0.)
         ax.plot(xinter, yinter, 'k-', linewidth = 3.)
         if '--reconstruction_cut' in sys.argv:
             ax.plot(xline, simline, 'grey', ls= '--')
@@ -378,18 +420,25 @@ if __name__ == '__main__':
             ax.plot([simcut, simcut], [cut, cut+0.2], 'red', ls= '-')
             ax.text(xline[1]+0.02, cut, str(cut), ha = 'left', va = 'center')
         ax.set_xlabel('JPLE latent distance')
-        ax.set_ylabel('RNA binding similarity R')
+        if '--positivity_rate' in sys.argv:
+            ax.set_ylabel('Positivity rate (R>'+str(pratecut)+')')
+        else:
+            ax.set_ylabel('RNA binding similarity R')
         ax.set_xticks([-1.5, -1, -0.5, 0.])
         ax.set_xticklabels([1.5, 1.0, 0.5, 0.])
         ax.set_yticks([-0.5,0., 0.5, 1.])
+        ax.set_yticks(np.arange(-0.6,1.,0.2), minor = True)
+        ax.set_xticks(np.arange(-1.6,0.2,0.2), minor = True)
+        ax.grid(which = 'minor')
+        
         ax.spines['right'].set_visible(False)
         ax.spines['top'].set_visible(False)
         
         fig2 = plt.figure(figsize = (4,4), dpi = 200)
         ax2 = fig2.add_subplot(111)
-        ax2.scatter(scorefull, identityfull, c='cadetblue', alpha = 0.05)
+        ax2.scatter(scorefull, identityfull, c='cadetblue', alpha = 0.15)
         ax2.errorbar(xmeanid, ymeanid, yerr=[yerrid[1], yerrid[0]], xerr=[xerrid[1], xerrid[0]], fmt='o', c = 'black')
-        ax2.fill_between(xinterid, yinterid-yintererrid[1], yinterid+yintererrid[0], color = 'grey', alpha = 0.5, linewidth = 0.)
+        ax2.fill_between(xinterid, yinterid-yintererrid[1], yinterid+yintererrid[0], color = 'grey', alpha = 0.3, linewidth = 0.)
         ax2.plot(xinterid, yinterid, 'k-', linewidth = 3.)
         if '--reconstruction_cut' in sys.argv:
             ax2.plot(xline, idline, 'grey', ls = '--')

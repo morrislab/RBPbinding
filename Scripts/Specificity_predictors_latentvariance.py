@@ -22,7 +22,6 @@ from sklearn.externals import joblib
 #from scipy.stats import logistic
 from scipy.spatial.distance import cdist
 import time
-from joblib import Parallel, delayed
 import multiprocessing
 from scipy.optimize import minimize
 from sklearn.gaussian_process import GaussianProcessRegressor
@@ -508,6 +507,8 @@ def check(val):
     return val == 'True' or val == 'true'
         
 
+# load the protein features 
+
 proteinfeatures = sys.argv[1]
 pobj = np.load(proteinfeatures)
 P = pobj['features']
@@ -516,8 +517,7 @@ protnames = pobj['protnames']
 pnames = pobj['expnames']
 outname = os.path.splitext(proteinfeatures)[0]
 
-
-
+# load the coefficients of the trained model to embed protein features
 recoefile = sys.argv[2]
 Loadcoef = np.load(recoefile, allow_pickle = True) # coefficients of trained model can be loaded
 coef_= Loadcoef['coef_']
@@ -543,6 +543,7 @@ if not np.array_equal(sequencefeatcompare, sequencefeatures):
 P = P.T
 print np.shape(P)
 
+# initiate jple model with loaded parameters
 params = {'xmeans':xmean, 'ymeans':ymean}
 pr = jple(coef_ = coef_, xloc = [0,len(sequencefeatures)], **params)
 
@@ -559,24 +560,28 @@ if '--fraction' in sys.argv:
     fcuts = np.array(sys.argv[sys.argv.index('--fraction')+1].split(','), dtype = float)
     outname += '-'.join(fcuts.astype(str))
 
+# iterate over all proteins in protein set
 for p, pna in enumerate(pnames):
     porig = P[p]
     lockmer = np.where(porig>0)[0]
-    numkmers = float(len(lockmer))
+    numkmers = len(lockmer)
     print p, '/', len(pnames), numkmers
-    randomperc = (np.random.uniform(0.3,0.7, permuts)*numkmers).astype(int)
+    # choose random percentage between 30 and 70% of k-mers that should be deleted
+    randomperc = (np.random.uniform(0.3,0.7, permuts)*float(numkmers)).astype(int)
     Ptest = [porig/np.sqrt(np.sum(porig**2))]
+    # generate a hundred permutations of that protein sequence by setting a random permutation to 0
     for i in range(permuts):
         ptest = np.copy(porig)
         ptest[np.random.permutation(lockmer)[:randomperc[i]]] = 0
         ptest = ptest/np.sqrt(np.sum(ptest**2))
         Ptest.append(ptest)
     Ptest = np.array(Ptest)
+    # embed into latent space
     Wtest = pr.latent(Ptest)
     
     wlength = np.sqrt(np.sum(Wtest[0]**2))
     lengthlat.append(wlength)
-    
+    # Measure distance of all permuted latent vectors to original one / assumption is that they should still be the close to each other. 
     bestrain = np.amin(cdist(Wtest[[0]],Wtrain, 'cosine'))
     distlat.append(bestrain)
     
@@ -685,8 +690,8 @@ fig.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.4)
 fig.tight_layout()
 
 if '--savefig' in sys.argv:
-    print 'Saved as', outname+'jpg'
-    fig.savefig(outname+'jpg', dpi = 250, bbox_inches = 'tight')
+    print 'Saved as', outname+'.svg'
+    fig.savefig(outname+'.svg', dpi = 250, bbox_inches = 'tight')
 plt.show()
 
 

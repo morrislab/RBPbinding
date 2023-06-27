@@ -17,6 +17,7 @@ from skbio.tree import nj
 from Bio import Phylo
 from io import StringIO
 
+#### If we trust neighbor joining more than sequence identity, we should use NJ first and then simply move along the tree for similarity clustering!!
 # make heatmap with sequence id (overlap of p-vectors) and jple distance to other species, include all species on tree.
 # make barplot for each species with different coloring for number of species the RBP clusters are in. See which bar is extraordonary big
 
@@ -140,6 +141,24 @@ if '--seqidfile' in sys.argv:
                 protmask[d] = False
         labels, idmat, domains, protnames = labels[protmask], idmat[:, protmask][protmask], domains[protmask], protnames[protmask]
     
+    elif '--domain_remove' in sys.argv:
+        # remove all sequences that contain a different domain type
+        selecteddomain = sys.argv[sys.argv.index('--domain_remove')+1]
+        outname += 'removerbd'+selecteddomain
+        protmask = np.ones(len(idmat)) == 1
+        for d, domain in enumerate(domains):
+            if selecteddomain in domain:
+                protmask[d] = False
+        labels, idmat, domains, protnames = labels[protmask], idmat[:, protmask][protmask], domains[protmask], protnames[protmask]
+    
+    if '--domainadjust' in sys.argv:
+        domaincounts = np.array([len(dc) for dc in domains ])
+        domaincountmat = np.ones((len(domaincounts), len(domaincounts))) * domaincounts
+        domaindiffmat = np.absolute(domaincountmat - domaincountmat.T) <= 1
+        domaincountmat = np.amin(np.array([domaincountmat, domaincountmat.T]),axis = 0)/np.amax(np.array([domaincountmat, domaincountmat.T]),axis = 0)
+        domaincountmat[domaindiffmat] = 1.
+        idmat = 1.+(idmat-1.)*domaincountmat
+    
     
     jpledistance = []
     # iterate over species that were included
@@ -220,6 +239,7 @@ if '--cluster' in sys.argv:
         classsize = clusters[:,4].astype(float)
     confidence = np.around(clusters[:,2].astype(float),2)
     evolution = clusters[:,9].astype(float)
+    parent = clusters[:,7].astype(int)
     
     jpledistance = jpledistance[sort]
     latentnames = latentnames[sort]
@@ -247,6 +267,28 @@ if linkagemeth == 'nj':
 # Use precalculated tree (for example from ClustalW)
 elif linkagemeth == 'precalc':
     tree = Phylo.read(sys.argv[sys.argv.index('--linkage')+2], "newick")
+    leafs = tree.get_terminals()
+    sorting = []
+    for leaf in leafs:
+        if '__' in leaf.name:
+            leaf.name = leaf.name.split('__')[0]
+        sorting.append(leaf.name)
+    sorting = np.isin(protnames, sorting)
+    
+    classmat = classmat[sorting]
+    classsize = classsize[sorting]
+    confidence = confidence[sorting]
+    evolution = evolution[sorting]
+    parent = parent[sorting]
+    
+    jpledistance = jpledistance[sorting]
+    latentnames = latentnames[sorting]
+    protnames = protnames[sorting]
+    idmat = idmat[sorting][:,sorting]
+    labels = labels[sorting]
+    domains = domains[sorting]
+    bestid = bestid[sorting]
+        
 else:    
     linkage_matrix = linkage(idmat[np.triu_indices(len(idmat),1)], method=linkagemeth)
 
@@ -277,7 +319,7 @@ axden.spines['right'].set_visible(False)
 axden.tick_params(which = 'both', left = False, labelleft = False)
 
 with plt.rc_context({'lines.linewidth': 3.}):
-    if linkagemeth == 'nj':
+    if linkagemeth == 'nj' or linkagemeth == 'precalc':
         leafs = tree.get_terminals()
         lengths = []
         for leaf in leafs:
@@ -291,6 +333,8 @@ with plt.rc_context({'lines.linewidth': 3.}):
         presortree = protnames.tolist() #np.arange(len(sortree),dtype = int).astype(str)
         sorting = []
         for so in sortree:
+            if '__' in so.name:
+                so.name = so.name.split('__')[0]
             sorting.append(presortree.index(so.name))
         axden.set_ylim([0.5,len(labels)+0.5])
         print(axden.get_xlim())
@@ -309,25 +353,27 @@ with plt.rc_context({'lines.linewidth': 3.}):
 if '--cluster' in sys.argv:
     axcl = fig.add_subplot(192)
     axm = fig.add_subplot(193)
+    axm2 = fig.add_subplot(194)
     axb = fig.add_subplot(195)
     axe = fig.add_subplot(198)
     axco = fig.add_subplot(197)
     
     axden.set_position([0.1,0.1,0.4,0.8])
-    axcl.set_position([0.65,0.1,0.05,0.8])
-    axe.set_position([0.55,0.1,0.05,0.8])
-    axco.set_position([0.6,0.1,0.05,0.8])
+    axcl.set_position([0.70,0.1,0.05,0.8])
+    axe.set_position([0.60,0.1,0.05,0.8])
+    axco.set_position([0.65,0.1,0.05,0.8])
     axm.set_position([0.5,0.1,0.05,0.8])
+    axm2.set_position([0.55,0.1,0.05,0.8])
     
     of = 0
     if '--speciesmat' in sys.argv:
-        axb.set_position([0.7,0.1,0.6,0.8])
+        axb.set_position([0.75,0.1,0.6,0.8])
         of = 0.6
     elif '--numbermatrix' in sys.argv:
-        axb.set_position([0.7,0.1,0.05,0.8])
+        axb.set_position([0.75,0.1,0.05,0.8])
         of = 0.05
     else:
-        axb.set_position([0.7,0.1,0.3,0.8])
+        axb.set_position([0.75,0.1,0.3,0.8])
         of = 0.3
     
     of2 = 0.
@@ -335,20 +381,20 @@ if '--cluster' in sys.argv:
     if '--seqidfile' in sys.argv:
         axc = fig.add_subplot(196)
         of2 = 0.04*len(shortspecies)
-        axc.set_position([0.7+of,0.1,of2,0.8])
+        axc.set_position([0.75+of,0.1,of2,0.8])
         of3 = 0.05*len(shortspecies)
         axc2 = fig.add_subplot(199)
-        axc2.set_position([0.7+of+of2,0.1,of3,0.8])
+        axc2.set_position([0.75+of+of2,0.1,of3,0.8])
         
         axcb = fig.add_subplot(296)
-        axcb.set_position([0.7+of,0.1-0.8/float(len(sorting)),of2,0.8/float(len(sorting))])
+        axcb.set_position([0.75+of,0.1-0.8/float(len(sorting)),of2,0.8/float(len(sorting))])
         axc2b = fig.add_subplot(299)
-        axc2b.set_position([0.7+of+of2,0.1-0.8/float(len(sorting)),of3,0.8/float(len(sorting))])
+        axc2b.set_position([0.75+of+of2,0.1-0.8/float(len(sorting)),of3,0.8/float(len(sorting))])
         
     
     if '--domainplot' in sys.argv:
-        axd = fig.add_subplot(194)
-        axd.set_position([0.7+of+of2+of3+0.01,0.1,0.18,0.8])
+        axd = fig.add_subplot(294)
+        axd.set_position([0.75+of+of2+of3+0.01,0.1,0.18,0.8])
         
     
     
@@ -376,9 +422,23 @@ if '--cluster' in sys.argv:
     axm.set_xticklabels(['Cluster'], rotation = 30, ha = 'right', va = 'top')
     for i in range(len(clusters)):
         axm.text(0,i,str(int(classmat[i][0])), ha = 'center', va = 'center')
+
+    axm2.imshow(classchange,origin = 'lower', cmap = 'Greys', aspect = 'auto', vmin = 0, vmax = 3)
+    axm2.spines['top'].set_visible(False)
+    axm2.spines['bottom'].set_visible(False)
+    axm2.spines['left'].set_visible(False)
+    axm2.spines['right'].set_visible(False)
+    axm2.tick_params(which = 'both', left = False, bottom = True, labelleft = False, labelbottom = True)
+    axm2.set_ylim([-0.5,len(labels)-0.5])
+    axm2.set_xticks([0])
+    axm2.set_xticklabels(['Parent cluster'], rotation = 30, ha = 'right', va = 'top')
+    parent = parent[sorting]
+    for i in range(len(clusters)):
+        axm2.text(0,i,str(int(parent[i])), ha = 'center', va = 'center')
+    
     
     evolution = evolution[sorting].reshape(-1,1) 
-    axe.imshow(evolution, origin = 'lower', cmap = ListedColormap(cm.tab20([13,12,10,6,8])), aspect = 'auto')
+    axe.imshow(evolution, origin = 'lower', cmap = ListedColormap(cm.tab20([12,10,6,8,15])), aspect = 'auto', vmin = 0, vmax = 4) 
     axe.spines['top'].set_visible(False)
     axe.spines['bottom'].set_visible(False)
     axe.spines['left'].set_visible(False)
@@ -402,7 +462,7 @@ if '--cluster' in sys.argv:
     axco.set_xticklabels(['Confidence'], rotation = 30, ha = 'right', va = 'top')
     for i in range(len(clusters)):
         axco.text(0,i,str(confidence[i][0]), ha = 'center', va = 'center')
-    
+        
     
     
     if '--seqidfile' in sys.argv:
@@ -468,7 +528,8 @@ if '--cluster' in sys.argv:
         axb.set_xticks([0])
         axb.set_xticklabels(['Number of species\npresent'], rotation = 90)
         for c, clsz in enumerate(classsize):
-            if clsz[0] <= 1:
+            #print(c, clsz[0], classsize[c], labels[sorting][c])
+            if clsz[0] <= vmax*0.1:
                 axb.text(0, c, str(clsz[0]), color = 'grey', va = 'center' , ha = 'center')
             else:
                 axb.text(0, c, str(clsz[0]), color = 'white', va = 'center' , ha = 'center')

@@ -52,7 +52,7 @@ ax.set_ylabel('')
 ax.set_xlabel('MyA')
 
 if '--outname' in sys.argv:
-    outname = sys.argv[2]
+    outname = sys.argv[sys.argv.index('--outname')+1]
 else:
     outname = sys.argv[1]+'.jpg'
 fig.savefig(outname, dpi = 300, bbox_inches = 'tight')

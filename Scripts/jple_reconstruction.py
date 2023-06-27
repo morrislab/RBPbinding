@@ -75,8 +75,8 @@ for d, xid in enumerate(xspeci):
     #ax2.text(confcut, confy+0.01, str(int(confy*100.))+'%', va = 'bottom', ha = 'right', color = 'red')
 
 if '--savefig' in sys.argv:
-    print 'Saved as', os.path.splitext(sys.argv[1])[0]+'-cummulativeclade.jpg'
-    fig2.savefig(os.path.splitext(sys.argv[1])[0]+'-cummulativeclade.jpg', dpi = 300, bbox_inches = 'tight')
+    print 'Saved as', os.path.splitext(sys.argv[1])[0]+'-cummulativeclade.svg'
+    fig2.savefig(os.path.splitext(sys.argv[1])[0]+'-cummulativeclade.svg', dpi = 300, bbox_inches = 'tight')
 else:
     fig2.tight_layout()
     plt.show()
