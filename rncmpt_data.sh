@@ -4,7 +4,8 @@ masterfile='S1.In_Progress.v6.For_all.DR-2.csv'
 indir='Data/'
 outdir='Outdir/'
 
-python Scripts/transformnpz.py ${indir}'Zscores_420_origrncmpt.npz'
+# Extract Zscore file
+tar xvfz Zscores_420_origrncmpt.tar.gz
 zscores='Zscores_420_origrncmpt.txt'
 
 rrmkhlist='RNCMPT_unique_experiments_RRM,KH.list'
