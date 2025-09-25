@@ -1,10 +1,14 @@
-# RBP sequence specificity
+# Old code collection for: [A resource of RNA-binding protein motifs across eukaryotes reveals evolutionary dynamics and gene-regulatory function](https://www.nature.com/articles/s41587-025-02733-6)
 
-(Current version does not contain RNA sequence specificities. Experimental data will be provided upon submission. Consequently, only scripts that work without RNA binding specificities can be executed)
+## Please use [https://github.com/morrislab/jple](https://github.com/morrislab/jple/) instead
 
-This directory contains the code for "Reconstructing sequence specificities of RNA binding proteins across eukaryotes".
+If you want to use JPLE to train your own model for predicting sequence specificity profiles from protein sequence, or infer RNA sequence specificity for RRM- or KH-domain using RNA-binding proteins, please refer to this repository: [https://github.com/morrislab/jple](https://github.com/morrislab/jple/)
 
-We used a joint linear embedding approach to model the relationship between protein sequence and RNA sequence specificity. 
+All the measured and inferred RNA sequence specificities can be found at [cisbp.org](https://cisbp.org/)
+
+### Content
+
+Maintainance for this repository is limited. It contains collections of scripts and CLIs that were used for analyses during my PhD thesis ["Inferring RNA Sequence Specificities from Protein Sequences to Characterize Post-Transcriptional Regulation in Eukaryotes"](https://www.proquest.com/openview/d075b03685b79e4426cb11a18d9f19ad/1?pq-origsite=gscholar&cbl=18750&diss=y) 
 
 Recommended: install anaconda and create virtual environment with python 2.7 adding dependencies listed in dependencies.txt
 
@@ -16,15 +20,11 @@ Additional requirements:
 (https://compbio.cs.princeton.edu/conservation/))
 - pymol (https://pymol.org/2/) to visualize individual pdbs
 
-Note: 
-To execute "full" pipeline (i.e. every intermediate step), very long running times and large amounts of memory are required. Parallel execution recommended!
+### Reproduce thesis results:
 
-To run every step, and modify intermediate results, set $full=1 in individual bash scripts.
-
-RUN:
 Before reconstructing the figures with (fig1-5.sh), execute data processing scripts (rncmpt_data.sh, performance_calc.sh, interface_importance.sh, jple_reconstruction.sh, cisbp-recstats.sh, arabidopsis.sh)
 
-The following order is recommended/required:
+The following order is required:
 
 1. rncmpt_data.sh
 2. fig1.sh
@@ -38,8 +38,9 @@ The following order is recommended/required:
 10. fig4.sh
 11. fig5.sh
 
-cisbp_reconstruction.sh executes scripts to locally generate data available on http://cisbp-rna.ccbr.utoronto.ca/, e.g. PWMs jpgs for confidentily reconstructed specificities. 
+### License
 
+All the code is licensed under the BSD 3-Clause License. See [LICENSE](https://github.com/lxsasse/RBPbinding/blob/main/LICENSE.md) for details.
 
 
 
