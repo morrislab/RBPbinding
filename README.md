@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/91751978.svg)](https://doi.org/10.5281/zenodo.17246480)
+
 # Archived Code Collection:
 
 **Associated with the paper:** <br>[A resource of RNA-binding protein motifs across eukaryotes reveals evolutionary dynamics and gene-regulatory function](https://www.nature.com/articles/s41587-025-02733-6)
